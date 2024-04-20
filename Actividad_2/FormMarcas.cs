@@ -16,5 +16,7 @@ namespace Actividad_2
         {
             InitializeComponent();
         }
+
+        
     }
 }

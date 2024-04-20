@@ -38,6 +38,7 @@
             // btnArticulos
             // 
             this.btnArticulos.BackColor = System.Drawing.Color.Cyan;
+            this.btnArticulos.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnArticulos.Location = new System.Drawing.Point(12, 12);
             this.btnArticulos.Name = "btnArticulos";
             this.btnArticulos.Size = new System.Drawing.Size(207, 49);
@@ -95,7 +96,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(747, 211);
+            this.ClientSize = new System.Drawing.Size(896, 444);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnMarcas);
