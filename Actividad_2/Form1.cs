@@ -16,5 +16,28 @@ namespace Actividad_2
         {
             InitializeComponent();
         }
+
+        private void btnArticulos_Click(object sender, EventArgs e)
+        {
+            FormArticulos VentaArticulos = new FormArticulos();
+
+            VentaArticulos.ShowDialog();
+
+        }
+
+        private void btnCategorias_Click(object sender, EventArgs e)
+        {
+            FormCategorias VentaCategorias = new FormCategorias();
+
+            VentaCategorias.ShowDialog();
+        }
+
+        private void btnMarcas_Click(object sender, EventArgs e)
+        {
+            FormMarcas VentanaMarcas = new FormMarcas();
+
+            VentanaMarcas.ShowDialog();
+        }
+
     }
 }
