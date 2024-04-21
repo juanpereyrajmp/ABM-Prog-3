@@ -79,6 +79,10 @@
             this.Controls.Add(this.btnModificarMarca);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnAgregarMarca);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(526, 396);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(526, 396);
             this.Name = "FormMarcas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Marcas";
