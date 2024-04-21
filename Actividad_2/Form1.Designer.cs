@@ -96,7 +96,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(896, 444);
+            this.ClientSize = new System.Drawing.Size(724, 228);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnMarcas);
@@ -104,7 +104,9 @@
             this.Controls.Add(this.btnArticulos);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(740, 267);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(740, 267);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ABM Articulos";
