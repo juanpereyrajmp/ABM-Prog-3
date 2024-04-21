@@ -16,5 +16,10 @@ namespace Actividad_2
         {
             InitializeComponent();
         }
+
+        private void btnModificarMarca_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
