@@ -17,9 +17,11 @@ namespace Actividad_2
             InitializeComponent();
         }
 
-        private void btnModificarMarca_Click(object sender, EventArgs e)
+        private void FormCategoria_Load(object sender, EventArgs e)
         {
-
+            CategoriaManager categoria = new CategoriaManager();
+            dgbCategoria.DataSource = categoria.listar();
         }
+
     }
 }

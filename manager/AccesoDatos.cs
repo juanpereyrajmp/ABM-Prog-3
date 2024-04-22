@@ -21,8 +21,8 @@ namespace manager
 
         public AccesoDatos() 
         {
-            conexion = new SqlConnection("server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true");
-            comando = new SqlCommand();
+            conexion = new SqlConnection("server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=false; User ID=sa;Password=1234");
+            comando = new SqlCommand(); 
 
         }
 
