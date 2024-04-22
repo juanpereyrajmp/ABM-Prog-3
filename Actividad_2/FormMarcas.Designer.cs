@@ -37,7 +37,7 @@
             // 
             // btnAgregarMarca
             // 
-            this.btnAgregarMarca.Location = new System.Drawing.Point(21, 23);
+            this.btnAgregarMarca.Location = new System.Drawing.Point(83, 70);
             this.btnAgregarMarca.Name = "btnAgregarMarca";
             this.btnAgregarMarca.Size = new System.Drawing.Size(116, 41);
             this.btnAgregarMarca.TabIndex = 0;
@@ -47,14 +47,14 @@
             // dgdMarcas
             // 
             this.dgdMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgdMarcas.Location = new System.Drawing.Point(203, 23);
+            this.dgdMarcas.Location = new System.Drawing.Point(439, 70);
             this.dgdMarcas.Name = "dgdMarcas";
             this.dgdMarcas.Size = new System.Drawing.Size(262, 288);
             this.dgdMarcas.TabIndex = 1;
             // 
             // btnModificarMarca
             // 
-            this.btnModificarMarca.Location = new System.Drawing.Point(21, 70);
+            this.btnModificarMarca.Location = new System.Drawing.Point(83, 117);
             this.btnModificarMarca.Name = "btnModificarMarca";
             this.btnModificarMarca.Size = new System.Drawing.Size(116, 41);
             this.btnModificarMarca.TabIndex = 2;
@@ -63,7 +63,7 @@
             // 
             // btnEliminarMarca
             // 
-            this.btnEliminarMarca.Location = new System.Drawing.Point(21, 117);
+            this.btnEliminarMarca.Location = new System.Drawing.Point(83, 164);
             this.btnEliminarMarca.Name = "btnEliminarMarca";
             this.btnEliminarMarca.Size = new System.Drawing.Size(116, 41);
             this.btnEliminarMarca.TabIndex = 3;
@@ -74,15 +74,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(510, 357);
+            this.ClientSize = new System.Drawing.Size(861, 484);
             this.Controls.Add(this.btnEliminarMarca);
             this.Controls.Add(this.btnModificarMarca);
             this.Controls.Add(this.dgdMarcas);
             this.Controls.Add(this.btnAgregarMarca);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(526, 396);
+            this.MaximumSize = new System.Drawing.Size(877, 523);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(526, 396);
+            this.MinimumSize = new System.Drawing.Size(877, 523);
             this.Name = "FormMarcas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Marcas";

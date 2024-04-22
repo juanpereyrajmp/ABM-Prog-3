@@ -38,14 +38,14 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(240, 13);
+            this.dataGridView1.Location = new System.Drawing.Point(288, 70);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(258, 326);
+            this.dataGridView1.Size = new System.Drawing.Size(455, 326);
             this.dataGridView1.TabIndex = 2;
             // 
             // btnEliminarArticulo
             // 
-            this.btnEliminarArticulo.Location = new System.Drawing.Point(12, 107);
+            this.btnEliminarArticulo.Location = new System.Drawing.Point(83, 164);
             this.btnEliminarArticulo.Name = "btnEliminarArticulo";
             this.btnEliminarArticulo.Size = new System.Drawing.Size(116, 41);
             this.btnEliminarArticulo.TabIndex = 6;
@@ -54,7 +54,7 @@
             // 
             // btnModificarArticulo
             // 
-            this.btnModificarArticulo.Location = new System.Drawing.Point(12, 60);
+            this.btnModificarArticulo.Location = new System.Drawing.Point(83, 117);
             this.btnModificarArticulo.Name = "btnModificarArticulo";
             this.btnModificarArticulo.Size = new System.Drawing.Size(116, 41);
             this.btnModificarArticulo.TabIndex = 5;
@@ -63,7 +63,7 @@
             // 
             // btnAgregarArticulo
             // 
-            this.btnAgregarArticulo.Location = new System.Drawing.Point(12, 13);
+            this.btnAgregarArticulo.Location = new System.Drawing.Point(83, 70);
             this.btnAgregarArticulo.Name = "btnAgregarArticulo";
             this.btnAgregarArticulo.Size = new System.Drawing.Size(116, 41);
             this.btnAgregarArticulo.TabIndex = 4;
@@ -74,17 +74,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(510, 357);
+            this.ClientSize = new System.Drawing.Size(861, 484);
             this.Controls.Add(this.btnEliminarArticulo);
             this.Controls.Add(this.btnModificarArticulo);
             this.Controls.Add(this.btnAgregarArticulo);
             this.Controls.Add(this.dataGridView1);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(526, 396);
+            this.MaximumSize = new System.Drawing.Size(877, 523);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(526, 396);
+            this.MinimumSize = new System.Drawing.Size(877, 523);
             this.Name = "FormArticulos";
-            this.Text = "FormArticulos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Artículos";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

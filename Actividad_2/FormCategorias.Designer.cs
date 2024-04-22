@@ -37,20 +37,18 @@
             // 
             // btnAgregarCategoria
             // 
-            this.btnAgregarCategoria.Location = new System.Drawing.Point(16, 16);
-            this.btnAgregarCategoria.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregarCategoria.Location = new System.Drawing.Point(83, 70);
             this.btnAgregarCategoria.Name = "btnAgregarCategoria";
-            this.btnAgregarCategoria.Size = new System.Drawing.Size(155, 50);
+            this.btnAgregarCategoria.Size = new System.Drawing.Size(116, 41);
             this.btnAgregarCategoria.TabIndex = 5;
             this.btnAgregarCategoria.Text = "Agregar Categoria";
             this.btnAgregarCategoria.UseVisualStyleBackColor = true;
             // 
             // btnModificarCategoria
             // 
-            this.btnModificarCategoria.Location = new System.Drawing.Point(16, 73);
-            this.btnModificarCategoria.Margin = new System.Windows.Forms.Padding(4);
+            this.btnModificarCategoria.Location = new System.Drawing.Point(83, 117);
             this.btnModificarCategoria.Name = "btnModificarCategoria";
-            this.btnModificarCategoria.Size = new System.Drawing.Size(155, 50);
+            this.btnModificarCategoria.Size = new System.Drawing.Size(116, 41);
             this.btnModificarCategoria.TabIndex = 6;
             this.btnModificarCategoria.Text = "Modificar Categoria";
             this.btnModificarCategoria.UseVisualStyleBackColor = true;
@@ -58,10 +56,9 @@
             // 
             // btnEliminarCategoria
             // 
-            this.btnEliminarCategoria.Location = new System.Drawing.Point(16, 130);
-            this.btnEliminarCategoria.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminarCategoria.Location = new System.Drawing.Point(83, 164);
             this.btnEliminarCategoria.Name = "btnEliminarCategoria";
-            this.btnEliminarCategoria.Size = new System.Drawing.Size(155, 50);
+            this.btnEliminarCategoria.Size = new System.Drawing.Size(116, 41);
             this.btnEliminarCategoria.TabIndex = 7;
             this.btnEliminarCategoria.Text = "Eliminar Categoria";
             this.btnEliminarCategoria.UseVisualStyleBackColor = true;
@@ -69,27 +66,27 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(309, 15);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(439, 70);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(344, 401);
+            this.dataGridView1.Size = new System.Drawing.Size(258, 326);
             this.dataGridView1.TabIndex = 8;
             // 
             // FormCategorias
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(677, 430);
+            this.ClientSize = new System.Drawing.Size(861, 484);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnEliminarCategoria);
             this.Controls.Add(this.btnModificarCategoria);
             this.Controls.Add(this.btnAgregarCategoria);
-            this.MaximumSize = new System.Drawing.Size(695, 477);
-            this.MinimumSize = new System.Drawing.Size(695, 477);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximumSize = new System.Drawing.Size(877, 523);
+            this.MinimumSize = new System.Drawing.Size(877, 523);
             this.Name = "FormCategorias";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormCategorias";
+            this.Text = "Categorías";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

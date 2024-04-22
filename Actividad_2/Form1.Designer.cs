@@ -28,100 +28,153 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnArticulos = new System.Windows.Forms.Button();
-            this.btnCategorias = new System.Windows.Forms.Button();
+            this.panelMenu = new System.Windows.Forms.Panel();
             this.btnMarcas = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnCategorias = new System.Windows.Forms.Button();
+            this.panelTitulo = new System.Windows.Forms.Panel();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.panelPrincipalDesktop = new System.Windows.Forms.Panel();
+            this.panelMenu.SuspendLayout();
+            this.panelTitulo.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnArticulos
             // 
-            this.btnArticulos.BackColor = System.Drawing.Color.Cyan;
-            this.btnArticulos.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnArticulos.Location = new System.Drawing.Point(12, 12);
+            this.btnArticulos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnArticulos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnArticulos.FlatAppearance.BorderSize = 0;
+            this.btnArticulos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnArticulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnArticulos.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnArticulos.Image = global::Actividad_2.Properties.Resources.icon_articulo;
+            this.btnArticulos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnArticulos.Location = new System.Drawing.Point(0, 0);
             this.btnArticulos.Name = "btnArticulos";
-            this.btnArticulos.Size = new System.Drawing.Size(207, 49);
+            this.btnArticulos.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
+            this.btnArticulos.Size = new System.Drawing.Size(220, 129);
             this.btnArticulos.TabIndex = 0;
-            this.btnArticulos.Text = "Articulos";
+            this.btnArticulos.Text = "  Articulos";
+            this.btnArticulos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnArticulos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnArticulos.UseVisualStyleBackColor = false;
             this.btnArticulos.Click += new System.EventHandler(this.btnArticulos_Click);
             // 
-            // btnCategorias
+            // panelMenu
             // 
-            this.btnCategorias.BackColor = System.Drawing.Color.Cyan;
-            this.btnCategorias.Location = new System.Drawing.Point(12, 78);
-            this.btnCategorias.Name = "btnCategorias";
-            this.btnCategorias.Size = new System.Drawing.Size(207, 49);
-            this.btnCategorias.TabIndex = 1;
-            this.btnCategorias.Text = "Categorias";
-            this.btnCategorias.UseVisualStyleBackColor = false;
-            this.btnCategorias.Click += new System.EventHandler(this.btnCategorias_Click);
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panelMenu.Controls.Add(this.btnMarcas);
+            this.panelMenu.Controls.Add(this.btnCategorias);
+            this.panelMenu.Controls.Add(this.btnArticulos);
+            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(220, 593);
+            this.panelMenu.TabIndex = 5;
             // 
             // btnMarcas
             // 
-            this.btnMarcas.BackColor = System.Drawing.Color.Cyan;
-            this.btnMarcas.Location = new System.Drawing.Point(12, 146);
+            this.btnMarcas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnMarcas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMarcas.FlatAppearance.BorderSize = 0;
+            this.btnMarcas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMarcas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMarcas.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnMarcas.Image = ((System.Drawing.Image)(resources.GetObject("btnMarcas.Image")));
+            this.btnMarcas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMarcas.Location = new System.Drawing.Point(0, 258);
             this.btnMarcas.Name = "btnMarcas";
-            this.btnMarcas.Size = new System.Drawing.Size(207, 49);
+            this.btnMarcas.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
+            this.btnMarcas.Size = new System.Drawing.Size(220, 129);
             this.btnMarcas.TabIndex = 2;
-            this.btnMarcas.Text = "Marcas";
+            this.btnMarcas.Text = "  Marcas";
+            this.btnMarcas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMarcas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMarcas.UseVisualStyleBackColor = false;
             this.btnMarcas.Click += new System.EventHandler(this.btnMarcas_Click);
             // 
-            // label1
+            // btnCategorias
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(261, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(429, 55);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "ABM ARTICULOS";
+            this.btnCategorias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnCategorias.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCategorias.FlatAppearance.BorderSize = 0;
+            this.btnCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCategorias.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnCategorias.Image = ((System.Drawing.Image)(resources.GetObject("btnCategorias.Image")));
+            this.btnCategorias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCategorias.Location = new System.Drawing.Point(0, 129);
+            this.btnCategorias.Name = "btnCategorias";
+            this.btnCategorias.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
+            this.btnCategorias.Size = new System.Drawing.Size(220, 129);
+            this.btnCategorias.TabIndex = 1;
+            this.btnCategorias.Text = "  Categorias";
+            this.btnCategorias.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCategorias.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCategorias.UseVisualStyleBackColor = false;
+            this.btnCategorias.Click += new System.EventHandler(this.btnCategorias_Click);
             // 
-            // label2
+            // panelTitulo
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(358, 108);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(223, 55);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "ANRAJU";
+            this.panelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(151)))), ((int)(((byte)(250)))));
+            this.panelTitulo.Controls.Add(this.lblTitle);
+            this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitulo.Location = new System.Drawing.Point(220, 0);
+            this.panelTitulo.Name = "panelTitulo";
+            this.panelTitulo.Size = new System.Drawing.Size(874, 80);
+            this.panelTitulo.TabIndex = 6;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(333, 29);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(0, 29);
+            this.lblTitle.TabIndex = 0;
+            // 
+            // panelPrincipalDesktop
+            // 
+            this.panelPrincipalDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelPrincipalDesktop.Location = new System.Drawing.Point(220, 80);
+            this.panelPrincipalDesktop.Name = "panelPrincipalDesktop";
+            this.panelPrincipalDesktop.Size = new System.Drawing.Size(874, 513);
+            this.panelPrincipalDesktop.TabIndex = 7;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(724, 228);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnMarcas);
-            this.Controls.Add(this.btnCategorias);
-            this.Controls.Add(this.btnArticulos);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1094, 593);
+            this.Controls.Add(this.panelPrincipalDesktop);
+            this.Controls.Add(this.panelTitulo);
+            this.Controls.Add(this.panelMenu);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(740, 267);
+            this.MaximumSize = new System.Drawing.Size(1110, 632);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(740, 267);
+            this.MinimumSize = new System.Drawing.Size(1110, 632);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ABM Articulos";
+            this.Text = "Catalogo TP2";
+            this.panelMenu.ResumeLayout(false);
+            this.panelTitulo.ResumeLayout(false);
+            this.panelTitulo.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button btnArticulos;
-        private System.Windows.Forms.Button btnCategorias;
+        private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Button btnMarcas;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnCategorias;
+        private System.Windows.Forms.Panel panelTitulo;
+        private System.Windows.Forms.Panel panelPrincipalDesktop;
+        private System.Windows.Forms.Label lblTitle;
     }
 }
 

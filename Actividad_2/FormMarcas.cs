@@ -20,7 +20,7 @@ namespace Actividad_2
 
         private void FormMarcas_Load(object sender, EventArgs e)
         {
-            MarcaConexion marca = new MarcaConexion();
+            MarcaManager marca = new MarcaManager();
             dgdMarcas.DataSource = marca.listar();
         }
     }

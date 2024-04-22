@@ -9,7 +9,7 @@ using manager;
 
 namespace Actividad_2
 {
-    public class MarcaConexion
+    public class MarcaManager
     {
 
         public List<Marca> listar()
