@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Actividad_2
+namespace dominio
 {
-    internal class Marca
+    public class Categoria
     {
-        public int Id { get; set; }
-        public string Descripcion { get; set; }
+        public int id { get; set; }
+        public string descripcion { get; set; }
     }
 }
