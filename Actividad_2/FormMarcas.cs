@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Actividad_2
 {
     public partial class FormMarcas : Form
@@ -17,6 +18,10 @@ namespace Actividad_2
             InitializeComponent();
         }
 
-        
+        private void FormMarcas_Load(object sender, EventArgs e)
+        {
+            MarcaConexion marca = new MarcaConexion();
+            dgdMarcas.DataSource = marca.listar();
+        }
     }
 }

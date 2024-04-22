@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dominio\Articulo.cs" />
+    <Compile Include="dominio\Categoria.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +72,9 @@
     <Compile Include="FormMarcas.Designer.cs">
       <DependentUpon>FormMarcas.cs</DependentUpon>
     </Compile>
+    <Compile Include="dominio\Imagen.cs" />
+    <Compile Include="dominio\Marca.cs" />
+    <Compile Include="conexion\MarcaConexion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

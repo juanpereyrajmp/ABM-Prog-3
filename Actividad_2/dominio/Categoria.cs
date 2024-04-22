@@ -9,6 +9,6 @@ namespace Actividad_2
     internal class Categoria
     {
         public int id { get; set; }
-        public string descripcion { get; set;}
+        public string descripcion { get; set; }
     }
 }

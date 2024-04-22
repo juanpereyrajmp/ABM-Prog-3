@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 namespace Actividad_2
 {
     internal class Marca
-    {   
-        public int id {  get; set; }
-        public string descripcion { get; set; }
+    {
+        public int Id { get; set; }
+        public string Descripcion { get; set; }
     }
 }
