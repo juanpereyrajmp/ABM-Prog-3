@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 using dominio;
 using manager;
 
-//namespace Actividad_2}
-namespace manager
+namespace Actividad_2
 {
     public class MarcaManager
     {
@@ -37,10 +36,6 @@ namespace manager
             catch (Exception ex) 
             {
                 throw ex;
-            }
-            finally
-            {
-                datos.cerrarConexion();
             }
 
         }

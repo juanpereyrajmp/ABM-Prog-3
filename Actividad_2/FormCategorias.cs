@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using manager;
 
 namespace Actividad_2
 {
@@ -18,11 +17,16 @@ namespace Actividad_2
             InitializeComponent();
         }
 
-        private void FormCategoria_Load(object sender, EventArgs e)
+        private void btnModificarMarca_Click(object sender, EventArgs e)
         {
-            CategoriaManager categoria = new CategoriaManager();
-            dgbCategoria.DataSource = categoria.listar();
+
         }
 
+        private void FormCategorias_Load(object sender, EventArgs e)
+        {
+            CategoriaManager categoria = new CategoriaManager();
+            dgdCategorias.DataSource = categoria.listar();
+            
+        }
     }
 }

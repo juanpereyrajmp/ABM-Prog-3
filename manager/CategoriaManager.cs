@@ -1,17 +1,16 @@
-﻿using System;
+﻿using dominio;
+using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using dominio;
 using manager;
 
-//amespace Actividad_2
-namespace manager
+namespace Actividad_2
 {
     public class CategoriaManager
     {
+
         public List<Categoria> listar()
         {
             List<Categoria> lista = new List<Categoria>();
@@ -36,10 +35,6 @@ namespace manager
             catch (Exception ex)
             {
                 throw ex;
-            }
-            finally
-            {
-                datos.cerrarConexion();
             }
 
         }
