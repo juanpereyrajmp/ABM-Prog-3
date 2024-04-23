@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 using dominio;
 using manager;
 
-namespace Actividad_2
+//amespace Actividad_2
+namespace manager
 {
     public class CategoriaManager
     {
@@ -35,6 +36,10 @@ namespace Actividad_2
             catch (Exception ex)
             {
                 throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
             }
 
         }
