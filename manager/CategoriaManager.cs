@@ -76,5 +76,24 @@ namespace Actividad_2
             }
             finally { datos.cerrarConexion(); }
         }
+
+        public void editarCategoria(Categoria nuevaCategoria)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("UPDATE CATEGORIAS SET Descripcion = @Descripcion WHERE Id = @Id");
+                datos.setearParametro("@Id", nuevaCategoria.Id);
+                datos.setearParametro("@Descripcion", nuevaCategoria.Descripcion);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally { datos.cerrarConexion(); }
+
+
+        }
     }
 }

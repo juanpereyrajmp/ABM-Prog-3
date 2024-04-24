@@ -1,4 +1,6 @@
-﻿using System;
+﻿using dominio;
+using manager;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,8 @@ namespace Actividad_2
 {
     public partial class FormEditarCategoria : Form
     {
+        private List<Categoria> listaCategoria;
+        private Categoria seleccionada;
         public FormEditarCategoria()
         {
             InitializeComponent();
@@ -20,6 +24,63 @@ namespace Actividad_2
         private void btnVolverEditarCategoria_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void FormEditarCategoria_Load(object sender, EventArgs e)
+        {
+            CategoriaManager adminCategoria = new CategoriaManager();
+            listaCategoria = adminCategoria.listar();
+            dgvEditarCategoria.DataSource = listaCategoria;
+        }
+
+        private void dgvEditarCategoria_SelectionChanged(object sender, EventArgs e)
+        {
+            CategoriaManager adminCategoria = new CategoriaManager();
+
+            seleccionada = (Categoria)dgvEditarCategoria.CurrentRow.DataBoundItem;
+            textBoxEditarCategoria.Text = seleccionada.Descripcion;
+        }
+
+        private void btnEditarCategoria_Click(object sender, EventArgs e)
+        {
+            Categoria nuevaCategoria = new Categoria();
+            CategoriaManager adminCategoria = new CategoriaManager();
+
+            ArticuloManager articuloManager = new ArticuloManager();
+            List<Articulo> listaArticulos = articuloManager.ListarArticulos();
+
+            string descripcion;
+
+            try
+            {
+                descripcion = textBoxEditarCategoria.Text;
+                if (descripcion == "")
+                {
+                    MessageBox.Show("El campo no puede estar vacio");
+                }
+                else
+                {
+                    bool validar = listaArticulos.Any(item => item.Categoria.Descripcion == descripcion);
+
+                    if (validar)
+                    {
+                        MessageBox.Show("Ya existe esa categoria");
+                    }
+                    else
+                    {
+                        seleccionada.Descripcion = descripcion;
+                        adminCategoria.editarCategoria(seleccionada);
+                        MessageBox.Show("Se actualizó la categoria");
+                        listaCategoria = adminCategoria.listar();
+                        dgvEditarCategoria.DataSource = listaCategoria;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }
