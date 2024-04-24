@@ -38,5 +38,27 @@ namespace Actividad_2
             }
 
         }
+
+        public void agregar (Categoria nuevo)
+        {
+            AccesoDatos data = new AccesoDatos();
+
+            try
+            {
+                data.setearConsulta("Insert into CATEGORIAS(Descripcion)values('"+ nuevo.Descripcion +"')");
+                data.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                data.cerrarConexion();
+            }
+
+
+
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using dominio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +26,25 @@ namespace Actividad_2
         private void button1_Click(object sender, EventArgs e)
         {
 
+            Categoria categoria = new Categoria();
+            CategoriaManager manager = new CategoriaManager();  
+            try
+            {
+                categoria.Descripcion = textBoxCategoria.Text;
+                manager.agregar(categoria);
+                MessageBox.Show("Agregado exitosamente");
+                Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void btnCancelarCategoria_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

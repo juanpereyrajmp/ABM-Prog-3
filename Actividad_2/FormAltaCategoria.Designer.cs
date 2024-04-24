@@ -69,6 +69,7 @@
             this.btnCancelarCategoria.TabIndex = 3;
             this.btnCancelarCategoria.Text = "Cancelar";
             this.btnCancelarCategoria.UseVisualStyleBackColor = true;
+            this.btnCancelarCategoria.Click += new System.EventHandler(this.btnCancelarCategoria_Click);
             // 
             // FormAltaCategoria
             // 
