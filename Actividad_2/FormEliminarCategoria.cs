@@ -30,5 +30,32 @@ namespace Actividad_2
             List<Categoria> listaCategoria = adminCategorias.listar();
             dgvEliminarCategoria.DataSource = listaCategoria;
         }
+
+        private void btnEliminarCategoria_Click(object sender, EventArgs e)
+        {
+            Categoria seleccionada = (Categoria)dgvEliminarCategoria.CurrentRow.DataBoundItem;
+
+            ArticuloManager articuloManager = new ArticuloManager();
+            CategoriaManager categoriamanager = new CategoriaManager();
+
+            List<Articulo> listaArticulos = articuloManager.ListarArticulos();
+
+
+            bool enUso = listaArticulos.Any(item => item.Categoria.Descripcion == seleccionada.Descripcion);
+
+
+            if (!enUso)
+            {
+                categoriamanager.eliminarCategoria(seleccionada.Id);
+                MessageBox.Show("Categoria eliminada correctamente");
+            }
+            else
+            {
+                MessageBox.Show("No se puede eliminar una categoria en uso");
+            }
+
+            List<Categoria> listaCategoria = categoriamanager.listar();
+            dgvEliminarCategoria.DataSource = listaCategoria;
+        }
     }
 }
