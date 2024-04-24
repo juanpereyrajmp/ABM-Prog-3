@@ -11,8 +11,9 @@ namespace Actividad_2
 {
     public class MarcaManager
     {
+        AccesoDatos datos = new AccesoDatos();
 
-        public List<Marca> listar()
+        public List<Marca> ListarMarcas()
         {
             List<Marca> lista = new List<Marca>();
             AccesoDatos datos = new AccesoDatos();
@@ -37,7 +38,29 @@ namespace Actividad_2
             {
                 throw ex;
             }
+            finally
+            {
+                datos.cerrarConexion();
+            }
 
+        }
+
+        public void agregarMarcas(Marca nueva)
+        {
+            try
+            {
+                datos.setearConsulta("insert into MARCAS VALUES ('" + nueva.Descripcion + "')");
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
         }
     }
 }

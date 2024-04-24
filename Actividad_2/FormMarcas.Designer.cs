@@ -43,6 +43,7 @@
             this.btnAgregarMarca.TabIndex = 0;
             this.btnAgregarMarca.Text = "Agregar marca";
             this.btnAgregarMarca.UseVisualStyleBackColor = true;
+            this.btnAgregarMarca.Click += new System.EventHandler(this.btnAgregarMarca_Click);
             // 
             // dgdMarcas
             // 

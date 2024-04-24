@@ -37,25 +37,28 @@
             // labelDescpCategoria
             // 
             this.labelDescpCategoria.AutoSize = true;
-            this.labelDescpCategoria.Location = new System.Drawing.Point(72, 160);
+            this.labelDescpCategoria.Location = new System.Drawing.Point(54, 130);
+            this.labelDescpCategoria.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDescpCategoria.Name = "labelDescpCategoria";
-            this.labelDescpCategoria.Size = new System.Drawing.Size(79, 16);
+            this.labelDescpCategoria.Size = new System.Drawing.Size(63, 13);
             this.labelDescpCategoria.TabIndex = 0;
             this.labelDescpCategoria.Text = "Descripcion";
             this.labelDescpCategoria.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBoxCategoria
             // 
-            this.textBoxCategoria.Location = new System.Drawing.Point(180, 154);
+            this.textBoxCategoria.Location = new System.Drawing.Point(135, 125);
+            this.textBoxCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxCategoria.Name = "textBoxCategoria";
-            this.textBoxCategoria.Size = new System.Drawing.Size(100, 22);
+            this.textBoxCategoria.Size = new System.Drawing.Size(76, 20);
             this.textBoxCategoria.TabIndex = 1;
             // 
             // btnAgregarCategoria
             // 
-            this.btnAgregarCategoria.Location = new System.Drawing.Point(76, 246);
+            this.btnAgregarCategoria.Location = new System.Drawing.Point(57, 200);
+            this.btnAgregarCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAgregarCategoria.Name = "btnAgregarCategoria";
-            this.btnAgregarCategoria.Size = new System.Drawing.Size(75, 30);
+            this.btnAgregarCategoria.Size = new System.Drawing.Size(56, 24);
             this.btnAgregarCategoria.TabIndex = 2;
             this.btnAgregarCategoria.Text = "Agregar";
             this.btnAgregarCategoria.UseVisualStyleBackColor = true;
@@ -63,9 +66,10 @@
             // 
             // btnCancelarCategoria
             // 
-            this.btnCancelarCategoria.Location = new System.Drawing.Point(201, 246);
+            this.btnCancelarCategoria.Location = new System.Drawing.Point(151, 200);
+            this.btnCancelarCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancelarCategoria.Name = "btnCancelarCategoria";
-            this.btnCancelarCategoria.Size = new System.Drawing.Size(79, 30);
+            this.btnCancelarCategoria.Size = new System.Drawing.Size(59, 24);
             this.btnCancelarCategoria.TabIndex = 3;
             this.btnCancelarCategoria.Text = "Cancelar";
             this.btnCancelarCategoria.UseVisualStyleBackColor = true;
@@ -73,15 +77,16 @@
             // 
             // FormAltaCategoria
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(362, 399);
+            this.ClientSize = new System.Drawing.Size(273, 331);
             this.Controls.Add(this.btnCancelarCategoria);
             this.Controls.Add(this.btnAgregarCategoria);
             this.Controls.Add(this.textBoxCategoria);
             this.Controls.Add(this.labelDescpCategoria);
-            this.MaximumSize = new System.Drawing.Size(380, 446);
-            this.MinimumSize = new System.Drawing.Size(380, 446);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximumSize = new System.Drawing.Size(289, 370);
+            this.MinimumSize = new System.Drawing.Size(289, 370);
             this.Name = "FormAltaCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAltaCategoria";

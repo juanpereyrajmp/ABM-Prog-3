@@ -21,7 +21,13 @@ namespace Actividad_2
         private void FormMarcas_Load(object sender, EventArgs e)
         {
             MarcaManager marca = new MarcaManager();
-            dgdMarcas.DataSource = marca.listar();
+            dgdMarcas.DataSource = marca.ListarMarcas();
+        }
+
+        private void btnAgregarMarca_Click(object sender, EventArgs e)
+        {
+            FormAgregarMarca formAgregarMarca = new FormAgregarMarca();
+            formAgregarMarca.ShowDialog();
         }
     }
 }
