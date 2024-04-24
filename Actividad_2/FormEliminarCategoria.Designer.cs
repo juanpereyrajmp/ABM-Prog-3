@@ -76,6 +76,7 @@
             this.Name = "FormEliminarCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEliminarCategoria";
+            this.Load += new System.EventHandler(this.FormEliminarCategoria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEliminarCategoria)).EndInit();
             this.ResumeLayout(false);
 
