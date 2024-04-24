@@ -94,9 +94,11 @@
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.txtMarca);
             this.Controls.Add(this.lblModificarMarca);
+            this.MaximumSize = new System.Drawing.Size(335, 456);
+            this.MinimumSize = new System.Drawing.Size(335, 456);
             this.Name = "FormEditarMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormEditarMarca";
+            this.Text = "Editar marca";
             this.Load += new System.EventHandler(this.FormEditarMarca_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).EndInit();
             this.ResumeLayout(false);

@@ -71,6 +71,7 @@
             this.btnEliminarMarca.TabIndex = 3;
             this.btnEliminarMarca.Text = "Eliminar marca";
             this.btnEliminarMarca.UseVisualStyleBackColor = true;
+            this.btnEliminarMarca.Click += new System.EventHandler(this.btnEliminarMarca_Click);
             // 
             // FormMarcas
             // 

@@ -80,6 +80,23 @@ namespace Actividad_2
 
 
         }
+
+        public void eliminarMarca(int id)
+        {
+            try
+            {
+                datos.setearConsulta("DELETE FROM MARCAS WHERE Id = @Id");
+                datos.setearParametro("@Id", id);
+                datos.ejecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally { datos.cerrarConexion(); }
+        }
     }
 }
 

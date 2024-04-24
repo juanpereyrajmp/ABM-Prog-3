@@ -35,5 +35,11 @@ namespace Actividad_2
             FormEditarMarca formEditarMarca = new FormEditarMarca();
             formEditarMarca.ShowDialog();
         }
+
+        private void btnEliminarMarca_Click(object sender, EventArgs e)
+        {
+            FormEliminarMarca formEliminarMarca = new FormEliminarMarca();
+            formEliminarMarca.ShowDialog();
+        }
     }
 }
