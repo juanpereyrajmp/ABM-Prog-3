@@ -29,5 +29,11 @@ namespace Actividad_2
             FormAgregarMarca formAgregarMarca = new FormAgregarMarca();
             formAgregarMarca.ShowDialog();
         }
+
+        private void btnModificarMarca_Click(object sender, EventArgs e)
+        {
+            FormEditarMarca formEditarMarca = new FormEditarMarca();
+            formEditarMarca.ShowDialog();
+        }
     }
 }

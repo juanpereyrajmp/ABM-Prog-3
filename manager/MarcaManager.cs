@@ -62,6 +62,24 @@ namespace Actividad_2
                 datos.cerrarConexion();
             }
         }
+
+        public void editarMarca(Marca nuevaMarca)
+        {
+            try
+            {
+                datos.setearConsulta("UPDATE MARCAS SET Descripcion = @Descripcion WHERE Id = @Id");
+                datos.setearParametro("@Id", nuevaMarca.Id);
+                datos.setearParametro("@Descripcion", nuevaMarca.Descripcion);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally { datos.cerrarConexion(); }
+
+
+        }
     }
 }
 

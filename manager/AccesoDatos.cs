@@ -46,6 +46,11 @@ namespace manager
             }
         }
 
+        public void setearParametro(string nombre, object valor)
+        {
+            comando.Parameters.AddWithValue(nombre, valor);
+        }
+
         public void ejecutarAccion()
         {
             comando.Connection = conexion;
