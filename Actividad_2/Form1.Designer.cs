@@ -138,6 +138,7 @@
             // 
             this.panelPrincipalDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelPrincipalDesktop.Location = new System.Drawing.Point(220, 80);
+            this.panelPrincipalDesktop.MaximumSize = new System.Drawing.Size(1500, 1500);
             this.panelPrincipalDesktop.Name = "panelPrincipalDesktop";
             this.panelPrincipalDesktop.Size = new System.Drawing.Size(874, 513);
             this.panelPrincipalDesktop.TabIndex = 7;

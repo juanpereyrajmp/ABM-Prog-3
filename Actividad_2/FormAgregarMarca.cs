@@ -67,6 +67,5 @@ namespace Actividad_2
             MarcaManager adminMarcas = new MarcaManager();
         }
 
-
     }
 }

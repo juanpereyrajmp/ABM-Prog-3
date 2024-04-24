@@ -121,7 +121,7 @@
   <data name="btnMarcas.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAABWpJREFUaEPt2UeILUUUxvERM+asKwMKihHcuHBhAHN2Y9aFoohZQRAMS9NGQRB0
+        EAAACxABrSO9dQAABWpJREFUaEPt2UeILUUUxvERM+asKwMKihHcuHBhAHN2Y9aFoohZQRAMS9NGQRB0
         K7pwpYgBc8IcELNiFlFRESPG73d5B4Z69/btHu/MU3kf/Jk51ae661ZXnTpVPbdS/2NtHI4K14V7wlvh
         m/DrMvz/ZnCNz5Fho/Cv0Frh5PBA+CP8NZDfw/3hpLBmWHKtHS4On4dq1C/h4XB58GZ2Cnp89WX4X5lr
         V4RHgjpV/7NwUdA5S6JDw/uhGvB8OD1sEIZqw3BGeCHU/d4LB4dFk566OdQDXwwHhFnpoPByqPvfFGb+
@@ -150,14 +150,14 @@
   <data name="btnCategorias.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAAQpJREFUaEPtmMupAkEURCcMPyH4SUjELNRM1GRcKMakrrSq4bai43w2Qw3WgQOv
+        EAAACxABrSO9dQAAAQpJREFUaEPtmMupAkEURCcMPyH4SUjELNRM1GRcKMakrrSq4bai43w2Qw3WgQOv
         ebfhFu1sqjDGGGNMOUf4EPcMKxnDsouKjuBPtpBDu3TS5AC54yadPmA6/uMOr3ACVZnBG+Su3Dm/zAXG
         czHEAqqzhAwTe6dvJg78OSm/xCdTuIex/+uPnuIgajiIGq2DxFzX1pHn2l7o2jryXNMLqjiIGg6ixv8G
         ibmurSPPtb3QtXXkuaYXVHEQNRxEja8g7ItYtfSFOYyOKwVhlRIHViysWtRZQfZasfcJJt4LOoZh1aIK
         X4J70jUsrU4ZhgnZF6lSWZkGAxjPpe4QVvL+zaiavwljjDHGZIriCeQHnGcNVUL5AAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="panelPrincipalDesktop.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
 </root>
