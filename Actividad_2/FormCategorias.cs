@@ -34,5 +34,17 @@ namespace Actividad_2
             FormAltaCategoria alta = new FormAltaCategoria();
             alta.ShowDialog();
         }
+
+        private void btnModificarCategoria_Click(object sender, EventArgs e)
+        {
+           // FormEliminarCategoria formEliminarCategoria = new FormEliminarCategoria();
+           // formEliminarCategoria.ShowDialog();
+        }
+
+        private void btnEliminarCategoria_Click(object sender, EventArgs e)
+        {
+            FormEliminarCategoria formEliminarCategoria = new FormEliminarCategoria();
+            formEliminarCategoria.ShowDialog();
+        }
     }
 }
