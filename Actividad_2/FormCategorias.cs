@@ -17,16 +17,22 @@ namespace Actividad_2
             InitializeComponent();
         }
 
-        private void btnModificarMarca_Click(object sender, EventArgs e)
-        {
+        //private void btnModificarMarca_Click(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
         private void FormCategorias_Load(object sender, EventArgs e)
         {
             CategoriaManager categoria = new CategoriaManager();
             dgdCategorias.DataSource = categoria.listar();
             
+        }
+
+        private void btnAgregarCategoria_Click(object sender, EventArgs e)
+        {
+            FormAltaCategoria alta = new FormAltaCategoria();
+            alta.ShowDialog();
         }
     }
 }
