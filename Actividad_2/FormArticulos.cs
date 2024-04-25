@@ -46,5 +46,27 @@ namespace Actividad_2
                 //picBoxArticulos.Load("https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png");
             }
         }
+
+        private void textBoxFiltro_TextChanged(object sender, EventArgs e)
+        {
+            List<Articulo> listaFiltrada;
+            //listaFiltrada = listaArticulo.FindAll(x => x.Nombre == textBoxFiltro.Text);
+            string filtro = textBoxFiltro.Text;
+
+            if(filtro.Length >= 1)
+            {
+                listaFiltrada = listaArticulo.FindAll(x => x.Nombre.ToLower().Contains(filtro.ToLower()));
+            }
+            else 
+            {
+                listaFiltrada = listaArticulo;
+            }
+
+            dgvArticulos.DataSource= null;
+            dgvArticulos.DataSource = listaFiltrada;
+
+            
+
+        }
     }
 }

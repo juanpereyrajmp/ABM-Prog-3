@@ -33,6 +33,8 @@
             this.btnModificarArticulo = new System.Windows.Forms.Button();
             this.btnAgregarArticulo = new System.Windows.Forms.Button();
             this.picBoxArticulos = new System.Windows.Forms.PictureBox();
+            this.labelFiltro = new System.Windows.Forms.Label();
+            this.textBoxFiltro = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxArticulos)).BeginInit();
             this.SuspendLayout();
@@ -41,64 +43,90 @@
             // 
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvArticulos.Location = new System.Drawing.Point(12, 12);
+            this.dgvArticulos.Location = new System.Drawing.Point(13, 81);
+            this.dgvArticulos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvArticulos.MultiSelect = false;
             this.dgvArticulos.Name = "dgvArticulos";
+            this.dgvArticulos.RowHeadersWidth = 51;
             this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvArticulos.Size = new System.Drawing.Size(537, 216);
+            this.dgvArticulos.Size = new System.Drawing.Size(716, 266);
             this.dgvArticulos.TabIndex = 0;
             this.dgvArticulos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArticulos_CellContentClick);
             // 
             // btnEliminarArticulo
             // 
-            this.btnEliminarArticulo.Location = new System.Drawing.Point(705, 407);
+            this.btnEliminarArticulo.Location = new System.Drawing.Point(940, 501);
+            this.btnEliminarArticulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEliminarArticulo.Name = "btnEliminarArticulo";
-            this.btnEliminarArticulo.Size = new System.Drawing.Size(116, 41);
+            this.btnEliminarArticulo.Size = new System.Drawing.Size(155, 50);
             this.btnEliminarArticulo.TabIndex = 6;
             this.btnEliminarArticulo.Text = "Eliminar Articulo";
             this.btnEliminarArticulo.UseVisualStyleBackColor = true;
             // 
             // btnModificarArticulo
             // 
-            this.btnModificarArticulo.Location = new System.Drawing.Point(583, 407);
+            this.btnModificarArticulo.Location = new System.Drawing.Point(777, 501);
+            this.btnModificarArticulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnModificarArticulo.Name = "btnModificarArticulo";
-            this.btnModificarArticulo.Size = new System.Drawing.Size(116, 41);
+            this.btnModificarArticulo.Size = new System.Drawing.Size(155, 50);
             this.btnModificarArticulo.TabIndex = 5;
             this.btnModificarArticulo.Text = "Modificar Articulo";
             this.btnModificarArticulo.UseVisualStyleBackColor = true;
             // 
             // btnAgregarArticulo
             // 
-            this.btnAgregarArticulo.Location = new System.Drawing.Point(461, 407);
+            this.btnAgregarArticulo.Location = new System.Drawing.Point(615, 501);
+            this.btnAgregarArticulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAgregarArticulo.Name = "btnAgregarArticulo";
-            this.btnAgregarArticulo.Size = new System.Drawing.Size(116, 41);
+            this.btnAgregarArticulo.Size = new System.Drawing.Size(155, 50);
             this.btnAgregarArticulo.TabIndex = 4;
             this.btnAgregarArticulo.Text = "Agregar Articulo";
             this.btnAgregarArticulo.UseVisualStyleBackColor = true;
             // 
             // picBoxArticulos
             // 
-            this.picBoxArticulos.Location = new System.Drawing.Point(591, 12);
+            this.picBoxArticulos.Location = new System.Drawing.Point(777, 81);
+            this.picBoxArticulos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picBoxArticulos.Name = "picBoxArticulos";
-            this.picBoxArticulos.Size = new System.Drawing.Size(219, 216);
+            this.picBoxArticulos.Size = new System.Drawing.Size(292, 266);
             this.picBoxArticulos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBoxArticulos.TabIndex = 7;
             this.picBoxArticulos.TabStop = false;
             // 
+            // labelFiltro
+            // 
+            this.labelFiltro.AutoSize = true;
+            this.labelFiltro.Location = new System.Drawing.Point(25, 47);
+            this.labelFiltro.Name = "labelFiltro";
+            this.labelFiltro.Size = new System.Drawing.Size(115, 16);
+            this.labelFiltro.TabIndex = 8;
+            this.labelFiltro.Text = "Filtrar por Nombre";
+            // 
+            // textBoxFiltro
+            // 
+            this.textBoxFiltro.Location = new System.Drawing.Point(146, 44);
+            this.textBoxFiltro.Name = "textBoxFiltro";
+            this.textBoxFiltro.Size = new System.Drawing.Size(178, 22);
+            this.textBoxFiltro.TabIndex = 9;
+            this.textBoxFiltro.TextChanged += new System.EventHandler(this.textBoxFiltro_TextChanged);
+            // 
             // FormArticulos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(861, 484);
+            this.ClientSize = new System.Drawing.Size(1145, 586);
+            this.Controls.Add(this.textBoxFiltro);
+            this.Controls.Add(this.labelFiltro);
             this.Controls.Add(this.picBoxArticulos);
             this.Controls.Add(this.btnEliminarArticulo);
             this.Controls.Add(this.btnModificarArticulo);
             this.Controls.Add(this.btnAgregarArticulo);
             this.Controls.Add(this.dgvArticulos);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(877, 523);
+            this.MaximumSize = new System.Drawing.Size(1163, 633);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(877, 523);
+            this.MinimumSize = new System.Drawing.Size(1163, 633);
             this.Name = "FormArticulos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Artículos";
@@ -106,6 +134,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxArticulos)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -116,5 +145,7 @@
         private System.Windows.Forms.Button btnModificarArticulo;
         private System.Windows.Forms.Button btnAgregarArticulo;
         private System.Windows.Forms.PictureBox picBoxArticulos;
+        private System.Windows.Forms.Label labelFiltro;
+        private System.Windows.Forms.TextBox textBoxFiltro;
     }
 }
