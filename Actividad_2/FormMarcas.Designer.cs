@@ -48,8 +48,11 @@
             // dgdMarcas
             // 
             this.dgdMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgdMarcas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgdMarcas.Location = new System.Drawing.Point(439, 70);
+            this.dgdMarcas.MultiSelect = false;
             this.dgdMarcas.Name = "dgdMarcas";
+            this.dgdMarcas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgdMarcas.Size = new System.Drawing.Size(262, 288);
             this.dgdMarcas.TabIndex = 1;
             // 

@@ -37,16 +37,18 @@
             // 
             // textBoxEditarCategoria
             // 
-            this.textBoxEditarCategoria.Location = new System.Drawing.Point(27, 104);
+            this.textBoxEditarCategoria.Location = new System.Drawing.Point(20, 84);
+            this.textBoxEditarCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxEditarCategoria.Name = "textBoxEditarCategoria";
-            this.textBoxEditarCategoria.Size = new System.Drawing.Size(220, 22);
+            this.textBoxEditarCategoria.Size = new System.Drawing.Size(166, 20);
             this.textBoxEditarCategoria.TabIndex = 0;
             // 
             // btnEditarCategoria
             // 
-            this.btnEditarCategoria.Location = new System.Drawing.Point(331, 104);
+            this.btnEditarCategoria.Location = new System.Drawing.Point(248, 84);
+            this.btnEditarCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEditarCategoria.Name = "btnEditarCategoria";
-            this.btnEditarCategoria.Size = new System.Drawing.Size(113, 43);
+            this.btnEditarCategoria.Size = new System.Drawing.Size(85, 35);
             this.btnEditarCategoria.TabIndex = 1;
             this.btnEditarCategoria.Text = "Confirmar";
             this.btnEditarCategoria.UseVisualStyleBackColor = true;
@@ -55,19 +57,24 @@
             // dgvEditarCategoria
             // 
             this.dgvEditarCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEditarCategoria.Location = new System.Drawing.Point(27, 174);
+            this.dgvEditarCategoria.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvEditarCategoria.Location = new System.Drawing.Point(20, 141);
+            this.dgvEditarCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvEditarCategoria.MultiSelect = false;
             this.dgvEditarCategoria.Name = "dgvEditarCategoria";
             this.dgvEditarCategoria.RowHeadersWidth = 51;
             this.dgvEditarCategoria.RowTemplate.Height = 24;
-            this.dgvEditarCategoria.Size = new System.Drawing.Size(417, 243);
+            this.dgvEditarCategoria.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvEditarCategoria.Size = new System.Drawing.Size(313, 197);
             this.dgvEditarCategoria.TabIndex = 2;
             this.dgvEditarCategoria.SelectionChanged += new System.EventHandler(this.dgvEditarCategoria_SelectionChanged);
             // 
             // btnVolverEditarCategoria
             // 
-            this.btnVolverEditarCategoria.Location = new System.Drawing.Point(331, 446);
+            this.btnVolverEditarCategoria.Location = new System.Drawing.Point(248, 362);
+            this.btnVolverEditarCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnVolverEditarCategoria.Name = "btnVolverEditarCategoria";
-            this.btnVolverEditarCategoria.Size = new System.Drawing.Size(113, 43);
+            this.btnVolverEditarCategoria.Size = new System.Drawing.Size(85, 35);
             this.btnVolverEditarCategoria.TabIndex = 3;
             this.btnVolverEditarCategoria.Text = "Volver";
             this.btnVolverEditarCategoria.UseVisualStyleBackColor = true;
@@ -75,18 +82,19 @@
             // 
             // FormEditarCategoria
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(489, 540);
+            this.ClientSize = new System.Drawing.Size(367, 439);
             this.Controls.Add(this.btnVolverEditarCategoria);
             this.Controls.Add(this.dgvEditarCategoria);
             this.Controls.Add(this.btnEditarCategoria);
             this.Controls.Add(this.textBoxEditarCategoria);
             this.Location = new System.Drawing.Point(251, 126);
-            this.MinimumSize = new System.Drawing.Size(441, 550);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MinimumSize = new System.Drawing.Size(335, 454);
             this.Name = "FormEditarCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormEditarCategoria";
+            this.Text = "Editar categoría";
             this.Load += new System.EventHandler(this.FormEditarCategoria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEditarCategoria)).EndInit();
             this.ResumeLayout(false);

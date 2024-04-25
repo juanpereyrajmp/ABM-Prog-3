@@ -24,27 +24,34 @@ namespace Actividad_2
 
         private void FormCategorias_Load(object sender, EventArgs e)
         {
+            cargar();
+        }
+
+        private void cargar()
+        {
             CategoriaManager categoria = new CategoriaManager();
             dgdCategorias.DataSource = categoria.listar();
-            
         }
 
         private void btnAgregarCategoria_Click(object sender, EventArgs e)
         {
             FormAltaCategoria alta = new FormAltaCategoria();
             alta.ShowDialog();
+            cargar();
         }
 
         private void btnModificarCategoria_Click(object sender, EventArgs e)
         {
            FormEditarCategoria formEditarCategoria = new FormEditarCategoria();
            formEditarCategoria.ShowDialog();
+           cargar();
         }
 
         private void btnEliminarCategoria_Click(object sender, EventArgs e)
         {
             FormEliminarCategoria formEliminarCategoria = new FormEliminarCategoria();
             formEliminarCategoria.ShowDialog();
+            cargar();
         }
     }
 }

@@ -37,7 +37,9 @@
             // dgvEliminarMarca
             // 
             this.dgvEliminarMarca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEliminarMarca.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvEliminarMarca.Location = new System.Drawing.Point(38, 34);
+            this.dgvEliminarMarca.MultiSelect = false;
             this.dgvEliminarMarca.Name = "dgvEliminarMarca";
             this.dgvEliminarMarca.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEliminarMarca.Size = new System.Drawing.Size(279, 226);

@@ -37,18 +37,23 @@
             // dgvEliminarCategoria
             // 
             this.dgvEliminarCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEliminarCategoria.Location = new System.Drawing.Point(53, 66);
+            this.dgvEliminarCategoria.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvEliminarCategoria.Location = new System.Drawing.Point(40, 54);
+            this.dgvEliminarCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvEliminarCategoria.MultiSelect = false;
             this.dgvEliminarCategoria.Name = "dgvEliminarCategoria";
             this.dgvEliminarCategoria.RowHeadersWidth = 51;
             this.dgvEliminarCategoria.RowTemplate.Height = 24;
-            this.dgvEliminarCategoria.Size = new System.Drawing.Size(380, 283);
+            this.dgvEliminarCategoria.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvEliminarCategoria.Size = new System.Drawing.Size(285, 230);
             this.dgvEliminarCategoria.TabIndex = 0;
             // 
             // btnEliminarCategoria
             // 
-            this.btnEliminarCategoria.Location = new System.Drawing.Point(571, 113);
+            this.btnEliminarCategoria.Location = new System.Drawing.Point(428, 92);
+            this.btnEliminarCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEliminarCategoria.Name = "btnEliminarCategoria";
-            this.btnEliminarCategoria.Size = new System.Drawing.Size(114, 48);
+            this.btnEliminarCategoria.Size = new System.Drawing.Size(86, 39);
             this.btnEliminarCategoria.TabIndex = 1;
             this.btnEliminarCategoria.Text = "Eliminar";
             this.btnEliminarCategoria.UseVisualStyleBackColor = true;
@@ -56,9 +61,10 @@
             // 
             // btnVolverEliminarCategoria
             // 
-            this.btnVolverEliminarCategoria.Location = new System.Drawing.Point(571, 237);
+            this.btnVolverEliminarCategoria.Location = new System.Drawing.Point(428, 193);
+            this.btnVolverEliminarCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnVolverEliminarCategoria.Name = "btnVolverEliminarCategoria";
-            this.btnVolverEliminarCategoria.Size = new System.Drawing.Size(114, 44);
+            this.btnVolverEliminarCategoria.Size = new System.Drawing.Size(86, 36);
             this.btnVolverEliminarCategoria.TabIndex = 2;
             this.btnVolverEliminarCategoria.Text = "Volver";
             this.btnVolverEliminarCategoria.UseVisualStyleBackColor = true;
@@ -66,17 +72,18 @@
             // 
             // FormEliminarCategoria
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(602, 372);
             this.Controls.Add(this.btnVolverEliminarCategoria);
             this.Controls.Add(this.btnEliminarCategoria);
             this.Controls.Add(this.dgvEliminarCategoria);
-            this.MaximumSize = new System.Drawing.Size(818, 497);
-            this.MinimumSize = new System.Drawing.Size(818, 497);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximumSize = new System.Drawing.Size(618, 411);
+            this.MinimumSize = new System.Drawing.Size(618, 411);
             this.Name = "FormEliminarCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormEliminarCategoria";
+            this.Text = "Eliminar categoria";
             this.Load += new System.EventHandler(this.FormEliminarCategoria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEliminarCategoria)).EndInit();
             this.ResumeLayout(false);

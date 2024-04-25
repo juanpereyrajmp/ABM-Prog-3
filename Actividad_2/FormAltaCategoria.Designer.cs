@@ -48,7 +48,7 @@
             // textBoxCategoria
             // 
             this.textBoxCategoria.Location = new System.Drawing.Point(135, 125);
-            this.textBoxCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCategoria.Name = "textBoxCategoria";
             this.textBoxCategoria.Size = new System.Drawing.Size(76, 20);
             this.textBoxCategoria.TabIndex = 1;
@@ -56,7 +56,7 @@
             // btnAgregarCategoria
             // 
             this.btnAgregarCategoria.Location = new System.Drawing.Point(57, 200);
-            this.btnAgregarCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregarCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarCategoria.Name = "btnAgregarCategoria";
             this.btnAgregarCategoria.Size = new System.Drawing.Size(56, 24);
             this.btnAgregarCategoria.TabIndex = 2;
@@ -67,7 +67,7 @@
             // btnCancelarCategoria
             // 
             this.btnCancelarCategoria.Location = new System.Drawing.Point(151, 200);
-            this.btnCancelarCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelarCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelarCategoria.Name = "btnCancelarCategoria";
             this.btnCancelarCategoria.Size = new System.Drawing.Size(59, 24);
             this.btnCancelarCategoria.TabIndex = 3;
@@ -84,12 +84,12 @@
             this.Controls.Add(this.btnAgregarCategoria);
             this.Controls.Add(this.textBoxCategoria);
             this.Controls.Add(this.labelDescpCategoria);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(289, 370);
             this.MinimumSize = new System.Drawing.Size(289, 370);
             this.Name = "FormAltaCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormAltaCategoria";
+            this.Text = "Alta categoría";
             this.ResumeLayout(false);
             this.PerformLayout();
 
