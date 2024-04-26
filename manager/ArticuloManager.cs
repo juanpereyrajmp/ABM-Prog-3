@@ -74,17 +74,32 @@ namespace manager
             }
         }
 
-        public void AgregarArticulo()
+        public void AgregarArticulo(Articulo agregar)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, Precio) VALUES ('" + agregar.Codigo + "', '" + agregar.Nombre + "', '" + agregar.Descripcion + "', " + agregar.Precio + ")");
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public void ModificarArticulo(Articulo modificar)
         {
 
         }
 
-        public void ModificarArticulo()
-        {
-
-        }
-
-        public void EliminarArticulo()
+        public void EliminarArticulo(Articulo eliminar)
         {
 
         }
