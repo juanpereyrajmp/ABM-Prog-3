@@ -70,5 +70,10 @@ namespace Actividad_2
 
         }
 
+        private void btnAgregarArticulo_Click(object sender, EventArgs e)
+        {
+            FormAgregarArticulo nuevoArticulo = new FormAgregarArticulo();
+            nuevoArticulo.ShowDialog();
+        }
     }
 }

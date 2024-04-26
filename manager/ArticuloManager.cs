@@ -10,19 +10,6 @@ namespace manager
 {
     public class ArticuloManager
     {
-        private List<Articulo> lista = new List<Articulo>();
-        private List<Categoria> listaCategorias = new List<Categoria>();
-        private List<Marca> listaMarcas = new List<Marca>();
-        private SqlConnection conexion;
-        public SqlCommand comando;
-        private SqlDataReader lector;
-
-
-        public ArticuloManager()
-        {
-            conexion = new SqlConnection("server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true");
-            comando = new SqlCommand();
-        }
 
         public List<Articulo> ListarArticulos()
         {
@@ -87,37 +74,19 @@ namespace manager
             }
         }
 
-        public List<Articulo> ListarCodigoArticulo()
+        public void AgregarArticulo()
         {
-            try
-            {
-                comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "SELECT A.Id, Codigo, Nombre, A.Descripcion, M.Descripcion AS Marca, C.Descripcion AS Categoria, Precio, ImagenUrl FROM ARTICULOS A, MARCAS M , CATEGORIAS C, IMAGENES I WHERE A.IdMarca = M.Id AND A.IdCategoria = C.Id AND I.IdArticulo = A.Id";
-                comando.Connection = conexion;
 
-                conexion.Open();
-                lector = comando.ExecuteReader();
+        }
 
-                while (lector.Read())
-                {
-                    Articulo aux = new Articulo();
-                    aux.Codigo = (string)lector["Codigo"];
-                    aux.Nombre = (string)lector["Nombre"];
-                    aux.Descripcion = (string)lector["Descripcion"];
+        public void ModificarArticulo()
+        {
 
-                    aux.Precio = (decimal)lector["Precio"];
+        }
 
+        public void EliminarArticulo()
+        {
 
-                    lista.Add(aux);
-                }
-
-                conexion.Close();
-                return lista;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
         }
     }
 }
