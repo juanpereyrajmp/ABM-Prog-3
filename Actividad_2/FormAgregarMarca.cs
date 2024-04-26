@@ -56,7 +56,7 @@ namespace Actividad_2
             catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
 
         }

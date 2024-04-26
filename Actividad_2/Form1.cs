@@ -15,9 +15,9 @@ namespace Actividad_2
     public partial class Form1 : Form
     {
         
-        private Button currentButton;
-        private Random random;
-        private int tempIndex;
+        //private Button currentButton;
+        //private Random random;
+        //private int tempIndex;
         private Form activeForm;
 
         public Form1()

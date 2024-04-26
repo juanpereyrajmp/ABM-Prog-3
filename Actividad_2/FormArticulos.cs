@@ -25,11 +25,12 @@ namespace Actividad_2
             ArticuloManager articuloManager = new ArticuloManager();
             listaArticulo = articuloManager.ListarArticulos();
             dgvArticulos.DataSource = articuloManager.ListarArticulos();
+            dgvArticulos.Columns["Imagen"].Visible = false;
             cargarImagen(listaArticulo[0].Imagen);
             
         }
 
-        private void dgvArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
         {
             Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
             cargarImagen(seleccionado.Imagen);
@@ -41,7 +42,7 @@ namespace Actividad_2
             {
                picBoxArticulos.Load(imagen);  
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 picBoxArticulos.Load("https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png");
             }
@@ -68,5 +69,6 @@ namespace Actividad_2
             
 
         }
+
     }
 }

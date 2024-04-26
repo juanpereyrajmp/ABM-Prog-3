@@ -49,7 +49,7 @@ namespace manager
                     }
                     else
                     {
-                        aux.Marca.Descripcion = "";
+                        aux.Marca.Descripcion = "Sin Marca";
                     }
 
                     if (!Convert.IsDBNull(datos.Lector["Categoria"]))
@@ -58,7 +58,7 @@ namespace manager
                     }
                     else
                     {
-                        aux.Categoria.Descripcion = "https://images.samsung.com/is/image/samsung/co-galaxy-s10-sm-g970-sm-g970fzyjcoo-frontcanaryyellow-thumb-149016542";
+                        aux.Categoria.Descripcion = "Sin categoria";
                     }
 
 
