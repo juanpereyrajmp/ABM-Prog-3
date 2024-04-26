@@ -28,6 +28,8 @@ namespace Actividad_2
         {
             Articulo nuevoArticulo = new Articulo();
             ArticuloManager manager = new ArticuloManager();
+            Imagen nuevaImagen = new Imagen();
+
             try
             {
                 nuevoArticulo.Codigo = txtBoxCodigo.Text;
@@ -63,6 +65,23 @@ namespace Actividad_2
             {
 
                 MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void txtBoxImagen_Leave(object sender, EventArgs e)
+        {
+            cargarImagen(txtBoxImagen.Text);
+        }
+
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+                pbxArticulo.Load(imagen);
+            }
+            catch (Exception)
+            {
+                pbxArticulo.Load("https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png");
             }
         }
     }

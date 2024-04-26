@@ -44,6 +44,8 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.cboMarca = new System.Windows.Forms.ComboBox();
             this.cboCategoria = new System.Windows.Forms.ComboBox();
+            this.pbxArticulo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCodigo
@@ -78,21 +80,21 @@
             this.txtBoxDescripcion.Location = new System.Drawing.Point(84, 74);
             this.txtBoxDescripcion.Name = "txtBoxDescripcion";
             this.txtBoxDescripcion.Size = new System.Drawing.Size(250, 20);
-            this.txtBoxDescripcion.TabIndex = 3;
+            this.txtBoxDescripcion.TabIndex = 2;
             // 
             // txtBoxNombre
             // 
             this.txtBoxNombre.Location = new System.Drawing.Point(84, 43);
             this.txtBoxNombre.Name = "txtBoxNombre";
             this.txtBoxNombre.Size = new System.Drawing.Size(250, 20);
-            this.txtBoxNombre.TabIndex = 4;
+            this.txtBoxNombre.TabIndex = 1;
             // 
             // txtBoxCodigo
             // 
             this.txtBoxCodigo.Location = new System.Drawing.Point(84, 10);
             this.txtBoxCodigo.Name = "txtBoxCodigo";
             this.txtBoxCodigo.Size = new System.Drawing.Size(250, 20);
-            this.txtBoxCodigo.TabIndex = 5;
+            this.txtBoxCodigo.TabIndex = 0;
             this.txtBoxCodigo.Tag = "";
             // 
             // lblMarca
@@ -136,31 +138,32 @@
             this.txtBoxImagen.Location = new System.Drawing.Point(84, 179);
             this.txtBoxImagen.Name = "txtBoxImagen";
             this.txtBoxImagen.Size = new System.Drawing.Size(250, 20);
-            this.txtBoxImagen.TabIndex = 10;
+            this.txtBoxImagen.TabIndex = 5;
+            this.txtBoxImagen.Leave += new System.EventHandler(this.txtBoxImagen_Leave);
             // 
             // txtBoxPrecio
             // 
             this.txtBoxPrecio.Location = new System.Drawing.Point(84, 214);
             this.txtBoxPrecio.Name = "txtBoxPrecio";
             this.txtBoxPrecio.Size = new System.Drawing.Size(250, 20);
-            this.txtBoxPrecio.TabIndex = 11;
+            this.txtBoxPrecio.TabIndex = 6;
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(60, 271);
+            this.btnAceptar.Location = new System.Drawing.Point(84, 271);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(104, 34);
-            this.btnAceptar.TabIndex = 12;
+            this.btnAceptar.TabIndex = 7;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(199, 271);
+            this.btnCancelar.Location = new System.Drawing.Point(230, 271);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(104, 34);
-            this.btnCancelar.TabIndex = 13;
+            this.btnCancelar.TabIndex = 8;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -172,7 +175,7 @@
             this.cboMarca.Location = new System.Drawing.Point(84, 108);
             this.cboMarca.Name = "cboMarca";
             this.cboMarca.Size = new System.Drawing.Size(250, 21);
-            this.cboMarca.TabIndex = 14;
+            this.cboMarca.TabIndex = 3;
             // 
             // cboCategoria
             // 
@@ -181,13 +184,23 @@
             this.cboCategoria.Location = new System.Drawing.Point(84, 143);
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(250, 21);
-            this.cboCategoria.TabIndex = 15;
+            this.cboCategoria.TabIndex = 4;
+            // 
+            // pbxArticulo
+            // 
+            this.pbxArticulo.Location = new System.Drawing.Point(352, 10);
+            this.pbxArticulo.Name = "pbxArticulo";
+            this.pbxArticulo.Size = new System.Drawing.Size(285, 295);
+            this.pbxArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxArticulo.TabIndex = 16;
+            this.pbxArticulo.TabStop = false;
             // 
             // FormAgregarArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(355, 333);
+            this.ClientSize = new System.Drawing.Size(649, 322);
+            this.Controls.Add(this.pbxArticulo);
             this.Controls.Add(this.cboCategoria);
             this.Controls.Add(this.cboMarca);
             this.Controls.Add(this.btnCancelar);
@@ -205,13 +218,14 @@
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblCodigo);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(371, 372);
+            this.MaximumSize = new System.Drawing.Size(665, 361);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(371, 372);
+            this.MinimumSize = new System.Drawing.Size(665, 361);
             this.Name = "FormAgregarArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo Articulo";
             this.Load += new System.EventHandler(this.FormAgregarArticulo_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,5 +249,6 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.ComboBox cboMarca;
         private System.Windows.Forms.ComboBox cboCategoria;
+        private System.Windows.Forms.PictureBox pbxArticulo;
     }
 }
