@@ -14,9 +14,17 @@ namespace Actividad_2
 {
     public partial class FormAgregarArticulo : Form
     {
+        private Articulo articulo = null;
         public FormAgregarArticulo()
         {
             InitializeComponent();
+        }
+
+        public FormAgregarArticulo(Articulo articulo)
+        {
+            InitializeComponent();
+            this.articulo = articulo;
+            
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -59,7 +67,22 @@ namespace Actividad_2
             try
             {
                 cboMarca.DataSource = marcaManager.ListarMarcas();
+                cboMarca.ValueMember = "Id";
+                cboMarca.DisplayMember = "Descripcion";
                 cboCategoria.DataSource = categoriaManager.listar();
+                cboCategoria.ValueMember = "Id";
+                cboCategoria.DisplayMember = "Descripcion";
+
+                if(articulo != null)
+                {
+                    txtBoxCodigo.Text = articulo.Codigo;
+                    txtBoxNombre.Text = articulo.Nombre;
+                    txtBoxDescripcion.Text = articulo.Descripcion;
+                    txtBoxPrecio.Text = articulo.Precio.ToString();
+                    cargarImagen(articulo.Imagen);
+                    cboMarca.SelectedValue = articulo.Marca.Id;
+                    cboCategoria.SelectedValue = articulo.Categoria.Id;
+                }
             }
             catch (Exception ex)
             {

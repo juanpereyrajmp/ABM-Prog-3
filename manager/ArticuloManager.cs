@@ -18,7 +18,7 @@ namespace manager
 
             try
             {
-                datos.setearConsulta("SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion AS ArticuloDescripcion, M.Descripcion AS Marca, C.Descripcion AS Categoria, A.Precio, I.ImagenUrl FROM ARTICULOS A LEFT JOIN MARCAS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id LEFT JOIN IMAGENES I ON A.Id = I.IdArticulo");
+                datos.setearConsulta("SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion AS ArticuloDescripcion, M.Descripcion AS Marca, C.Descripcion AS Categoria, A.Precio, I.ImagenUrl, C.Id, M.Id FROM ARTICULOS A LEFT JOIN MARCAS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id LEFT JOIN IMAGENES I ON A.Id = I.IdArticulo");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
@@ -32,6 +32,7 @@ namespace manager
 
                     if (!Convert.IsDBNull(datos.Lector["Marca"]))
                     {
+                        aux.Marca.Id = (int)datos.Lector["Id"];
                         aux.Marca.Descripcion = (string)datos.Lector["Marca"];
                     }
                     else
@@ -41,6 +42,7 @@ namespace manager
 
                     if (!Convert.IsDBNull(datos.Lector["Categoria"]))
                     {
+                        aux.Categoria.Id = (int)datos.Lector["Id"];
                         aux.Categoria.Descripcion = (string)datos.Lector["Categoria"];
                     }
                     else

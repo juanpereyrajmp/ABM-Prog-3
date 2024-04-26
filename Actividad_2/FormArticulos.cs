@@ -89,5 +89,15 @@ namespace Actividad_2
             nuevoArticulo.ShowDialog();
             cargar();
         }
+
+        private void btnModificarArticulo_Click(object sender, EventArgs e)
+        {
+            Articulo seleccion;
+            seleccion = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+
+            FormAgregarArticulo modificarArticulo = new FormAgregarArticulo(seleccion);
+            modificarArticulo.ShowDialog();
+            cargar();
+        }
     }
 }
