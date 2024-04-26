@@ -35,10 +35,29 @@ namespace Actividad_2
                 nuevoArticulo.Descripcion = txtBoxDescripcion.Text;
                 nuevoArticulo.Precio = decimal.Parse(txtBoxPrecio.Text);
                 nuevoArticulo.Imagen = txtBoxImagen.Text;
+                nuevoArticulo.Marca = (Marca)cboMarca.SelectedItem;
+                nuevoArticulo.Categoria = (Categoria)cboCategoria.SelectedItem;
 
                 manager.AgregarArticulo(nuevoArticulo);
                 MessageBox.Show("Articulo agregado con éxito");
                 Close();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void FormAgregarArticulo_Load(object sender, EventArgs e)
+        {
+            MarcaManager marcaManager = new MarcaManager();
+            CategoriaManager categoriaManager = new CategoriaManager();
+
+            try
+            {
+                cboMarca.DataSource = marcaManager.ListarMarcas();
+                cboCategoria.DataSource = categoriaManager.listar();
             }
             catch (Exception ex)
             {

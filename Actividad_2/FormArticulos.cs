@@ -22,12 +22,25 @@ namespace Actividad_2
 
         private void FormArticulos_Load(object sender, EventArgs e)
         {
+            cargar();
+        }
+
+        private void cargar()
+        {
             ArticuloManager articuloManager = new ArticuloManager();
-            listaArticulo = articuloManager.ListarArticulos();
-            dgvArticulos.DataSource = articuloManager.ListarArticulos();
-            dgvArticulos.Columns["Imagen"].Visible = false;
-            cargarImagen(listaArticulo[0].Imagen);
-            
+
+            try
+            {
+                listaArticulo = articuloManager.ListarArticulos();
+                dgvArticulos.DataSource = articuloManager.ListarArticulos();
+                dgvArticulos.Columns["Imagen"].Visible = false;
+                cargarImagen(listaArticulo[0].Imagen);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
@@ -74,6 +87,7 @@ namespace Actividad_2
         {
             FormAgregarArticulo nuevoArticulo = new FormAgregarArticulo();
             nuevoArticulo.ShowDialog();
+            cargar();
         }
     }
 }

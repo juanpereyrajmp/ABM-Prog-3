@@ -55,10 +55,6 @@ namespace manager
                     {
                         aux.Imagen = (string)datos.Lector["ImagenUrl"];
                     }
-                    else
-                    {
-
-                    }
 
                     lista.Add(aux);
                 }
@@ -80,7 +76,9 @@ namespace manager
 
             try
             {
-                datos.setearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, Precio) VALUES ('" + agregar.Codigo + "', '" + agregar.Nombre + "', '" + agregar.Descripcion + "', " + agregar.Precio + ")");
+                datos.setearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, Precio, IdMarca, IdCategoria) VALUES ('" + agregar.Codigo + "', '" + agregar.Nombre + "', '" + agregar.Descripcion + "', " + agregar.Precio + ", @IdMarca, @IdCategoria)");
+                datos.setearParametro("@IdMarca", agregar.Marca.Id);
+                datos.setearParametro("@IdCategoria", agregar.Categoria.Id);
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
@@ -103,5 +101,6 @@ namespace manager
         {
 
         }
+
     }
 }
