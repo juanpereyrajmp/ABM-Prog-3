@@ -24,7 +24,7 @@ namespace Actividad_2
         {
             InitializeComponent();
             this.articulo = articulo;
-            
+            Text = "Modificar Articulo";
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -34,22 +34,33 @@ namespace Actividad_2
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            Articulo nuevoArticulo = new Articulo();
             ArticuloManager manager = new ArticuloManager();
-            Imagen nuevaImagen = new Imagen();
 
             try
             {
-                nuevoArticulo.Codigo = txtBoxCodigo.Text;
-                nuevoArticulo.Nombre = txtBoxNombre.Text;
-                nuevoArticulo.Descripcion = txtBoxDescripcion.Text;
-                nuevoArticulo.Precio = decimal.Parse(txtBoxPrecio.Text);
-                nuevoArticulo.Imagen = txtBoxImagen.Text;
-                nuevoArticulo.Marca = (Marca)cboMarca.SelectedItem;
-                nuevoArticulo.Categoria = (Categoria)cboCategoria.SelectedItem;
+                if(articulo == null)
+                {
+                    articulo = new Articulo();
+                }
+                articulo.Codigo = txtBoxCodigo.Text;
+                articulo.Nombre = txtBoxNombre.Text;
+                articulo.Descripcion = txtBoxDescripcion.Text;
+                articulo.Precio = decimal.Parse(txtBoxPrecio.Text);
+                articulo.Imagen = txtBoxImagen.Text;
+                articulo.Marca = (Marca)cboMarca.SelectedItem;
+                articulo.Categoria = (Categoria)cboCategoria.SelectedItem;
 
-                manager.AgregarArticulo(nuevoArticulo);
-                MessageBox.Show("Articulo agregado con éxito");
+                if(articulo.Id != 0)
+                {
+                    manager.ModificarArticulo(articulo);
+                    MessageBox.Show("Articulo modificado con éxito");
+
+                }
+                else
+                {
+                    manager.AgregarArticulo(articulo);
+                    MessageBox.Show("Articulo agregado con éxito");
+                }
                 Close();
             }
             catch (Exception ex)

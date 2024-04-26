@@ -24,11 +24,14 @@ namespace manager
                 while (datos.Lector.Read())
                 {
                     Articulo aux = new Articulo();
+
                     aux.Id = (int)datos.Lector["Id"];
                     aux.Codigo = (string)datos.Lector["Codigo"];
                     aux.Nombre = (string)datos.Lector["Nombre"];
                     aux.Descripcion = (string)datos.Lector["ArticuloDescripcion"];
 
+
+                    Marca marca = new Marca();
 
                     if (!Convert.IsDBNull(datos.Lector["Marca"]))
                     {
@@ -39,6 +42,8 @@ namespace manager
                     {
                         aux.Marca.Descripcion = "Sin Marca";
                     }
+
+                    Categoria categoria = new Categoria();
 
                     if (!Convert.IsDBNull(datos.Lector["Categoria"]))
                     {
@@ -97,6 +102,29 @@ namespace manager
         public void ModificarArticulo(Articulo modificar)
         {
 
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("UPDATE ARTICULOS SET Codigo = @codigo, Nombre = @nombre, Descripcion = @descripcion, IdMarca = @idMarca, IdCategoria = @idCategoria, Precio = @precio WHERE Id = @id");
+                datos.setearParametro("@codigo", modificar.Codigo);
+                datos.setearParametro("@nombre", modificar.Nombre);
+                datos.setearParametro("@descripcion", modificar.Descripcion);
+                datos.setearParametro("@idMarca", modificar.Marca.Id);
+                datos.setearParametro("@idCategoria", modificar.Categoria.Id);
+                datos.setearParametro("@precio", modificar.Precio);
+                datos.setearParametro("@id", modificar.Id);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
         }
 
         public void EliminarArticulo(Articulo eliminar)

@@ -32,8 +32,9 @@ namespace Actividad_2
             try
             {
                 listaArticulo = articuloManager.ListarArticulos();
-                dgvArticulos.DataSource = articuloManager.ListarArticulos();
+                dgvArticulos.DataSource = listaArticulo;
                 dgvArticulos.Columns["Imagen"].Visible = false;
+                dgvArticulos.Columns["Id"].Visible = false;
                 cargarImagen(listaArticulo[0].Imagen);
             }
             catch (Exception ex)
@@ -41,12 +42,6 @@ namespace Actividad_2
 
                 MessageBox.Show(ex.ToString());
             }
-        }
-
-        private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
-        {
-            Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
-            cargarImagen(seleccionado.Imagen);
         }
 
         private void cargarImagen(string imagen)
@@ -76,7 +71,7 @@ namespace Actividad_2
                 listaFiltrada = listaArticulo;
             }
 
-            dgvArticulos.DataSource= null;
+            //dgvArticulos.DataSource = null;
             dgvArticulos.DataSource = listaFiltrada;
 
             
@@ -92,12 +87,22 @@ namespace Actividad_2
 
         private void btnModificarArticulo_Click(object sender, EventArgs e)
         {
+
             Articulo seleccion;
             seleccion = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
 
             FormAgregarArticulo modificarArticulo = new FormAgregarArticulo(seleccion);
             modificarArticulo.ShowDialog();
             cargar();
+        }
+
+        private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
+        {
+            if(dgvArticulos.CurrentRow != null)
+            {
+                Articulo seleccion = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                cargarImagen(seleccion.Imagen);
+            }
         }
     }
 }
