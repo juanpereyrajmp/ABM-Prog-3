@@ -104,5 +104,29 @@ namespace Actividad_2
                 cargarImagen(seleccion.Imagen);
             }
         }
+
+        private void btnEliminarArticulo_Click(object sender, EventArgs e)
+        {
+
+            ArticuloManager manager = new ArticuloManager();
+
+            Articulo seleccion;
+
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("¿Seguro querés eliminar el articulo seleccionado?", "Eliminado", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if(respuesta == DialogResult.Yes)
+                {
+                    seleccion = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                    manager.EliminarArticulo(seleccion.Id);
+                    cargar();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }

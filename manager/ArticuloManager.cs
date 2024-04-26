@@ -127,9 +127,20 @@ namespace manager
             }
         }
 
-        public void EliminarArticulo(Articulo eliminar)
+        public void EliminarArticulo(int id)
         {
+            try
+            {
+                AccesoDatos datos = new AccesoDatos();
+                datos.setearConsulta("DELETE FROM ARTICULOS WHERE id = @id");
+                datos.setearParametro("@id", id);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
 
+                throw ex;
+            }
         }
 
     }
