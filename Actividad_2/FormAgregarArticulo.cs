@@ -35,6 +35,7 @@ namespace Actividad_2
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             ArticuloManager manager = new ArticuloManager();
+            ArticuloManager imagenes = new ArticuloManager();
 
             try
             {
@@ -46,19 +47,21 @@ namespace Actividad_2
                 articulo.Nombre = txtBoxNombre.Text;
                 articulo.Descripcion = txtBoxDescripcion.Text;
                 articulo.Precio = decimal.Parse(txtBoxPrecio.Text);
-                articulo.Imagen = txtBoxImagen.Text;
+                articulo.Imagen = (string)txtBoxImagen.Text;
                 articulo.Marca = (Marca)cboMarca.SelectedItem;
                 articulo.Categoria = (Categoria)cboCategoria.SelectedItem;
 
                 if(articulo.Id != 0)
                 {
                     manager.ModificarArticulo(articulo);
+                    imagenes.agregarImagen(articulo);
                     MessageBox.Show("Articulo modificado con éxito");
 
                 }
                 else
                 {
                     manager.AgregarArticulo(articulo);
+                    imagenes.agregarImagen(articulo);
                     MessageBox.Show("Articulo agregado con éxito");
                 }
                 Close();

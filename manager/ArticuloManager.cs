@@ -10,6 +10,7 @@ namespace manager
 {
     public class ArticuloManager
     {
+        AccesoDatos datos = new AccesoDatos();
 
         public List<Articulo> ListarArticulos()
         {
@@ -29,7 +30,6 @@ namespace manager
                     aux.Codigo = (string)datos.Lector["Codigo"];
                     aux.Nombre = (string)datos.Lector["Nombre"];
                     aux.Descripcion = (string)datos.Lector["ArticuloDescripcion"];
-
 
                     Marca marca = new Marca();
 
@@ -101,7 +101,6 @@ namespace manager
 
         public void ModificarArticulo(Articulo modificar)
         {
-
             AccesoDatos datos = new AccesoDatos();
 
             try
@@ -143,5 +142,29 @@ namespace manager
             }
         }
 
+        public void agregarImagen(Articulo nuevoArticulo)
+        {
+            Articulo articulo = new Articulo();
+            articulo = ListarArticulos().Last();
+
+            try
+            {
+                int idArticulo = articulo.Id;
+                datos.setearConsulta("INSERT INTO IMAGENES (IdArticulo, ImagenUrl) VALUES (@IdArticulo, @ImagenUrl)");
+                datos.setearParametro("@IdArticulo", idArticulo);
+                datos.setearParametro("@ImagenUrl", nuevoArticulo.Imagen);
+                datos.cerrarConexion();
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
 }
