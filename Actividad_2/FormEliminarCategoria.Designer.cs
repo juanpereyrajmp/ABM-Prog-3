@@ -36,28 +36,24 @@
             // 
             // dgvEliminarCategoria
             // 
-            this.dgvEliminarCategoria.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvEliminarCategoria.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dgvEliminarCategoria.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvEliminarCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEliminarCategoria.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvEliminarCategoria.Location = new System.Drawing.Point(230, 26);
-            this.dgvEliminarCategoria.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvEliminarCategoria.Location = new System.Drawing.Point(40, 54);
+            this.dgvEliminarCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvEliminarCategoria.MultiSelect = false;
             this.dgvEliminarCategoria.Name = "dgvEliminarCategoria";
+            this.dgvEliminarCategoria.RowHeadersWidth = 51;
             this.dgvEliminarCategoria.RowTemplate.Height = 24;
             this.dgvEliminarCategoria.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEliminarCategoria.Size = new System.Drawing.Size(234, 230);
+            this.dgvEliminarCategoria.Size = new System.Drawing.Size(285, 230);
             this.dgvEliminarCategoria.TabIndex = 0;
             // 
             // btnEliminarCategoria
             // 
-            this.btnEliminarCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminarCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarCategoria.Location = new System.Drawing.Point(25, 26);
-            this.btnEliminarCategoria.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminarCategoria.Location = new System.Drawing.Point(428, 92);
+            this.btnEliminarCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEliminarCategoria.Name = "btnEliminarCategoria";
-            this.btnEliminarCategoria.Size = new System.Drawing.Size(182, 42);
+            this.btnEliminarCategoria.Size = new System.Drawing.Size(86, 39);
             this.btnEliminarCategoria.TabIndex = 1;
             this.btnEliminarCategoria.Text = "Eliminar";
             this.btnEliminarCategoria.UseVisualStyleBackColor = true;
@@ -65,12 +61,10 @@
             // 
             // btnVolverEliminarCategoria
             // 
-            this.btnVolverEliminarCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVolverEliminarCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolverEliminarCategoria.Location = new System.Drawing.Point(25, 83);
-            this.btnVolverEliminarCategoria.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVolverEliminarCategoria.Location = new System.Drawing.Point(428, 193);
+            this.btnVolverEliminarCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnVolverEliminarCategoria.Name = "btnVolverEliminarCategoria";
-            this.btnVolverEliminarCategoria.Size = new System.Drawing.Size(182, 42);
+            this.btnVolverEliminarCategoria.Size = new System.Drawing.Size(86, 36);
             this.btnVolverEliminarCategoria.TabIndex = 2;
             this.btnVolverEliminarCategoria.Text = "Volver";
             this.btnVolverEliminarCategoria.UseVisualStyleBackColor = true;
@@ -80,13 +74,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(485, 287);
+            this.ClientSize = new System.Drawing.Size(602, 372);
             this.Controls.Add(this.btnVolverEliminarCategoria);
             this.Controls.Add(this.btnEliminarCategoria);
             this.Controls.Add(this.dgvEliminarCategoria);
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.MaximumSize = new System.Drawing.Size(501, 326);
-            this.MinimumSize = new System.Drawing.Size(501, 326);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximumSize = new System.Drawing.Size(618, 411);
+            this.MinimumSize = new System.Drawing.Size(618, 411);
             this.Name = "FormEliminarCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Eliminar categoria";

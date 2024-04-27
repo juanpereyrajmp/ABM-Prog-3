@@ -33,9 +33,9 @@ namespace Actividad_2
             {
                 listaArticulo = articuloManager.ListarArticulos();
                 dgvArticulos.DataSource = listaArticulo;
-               // dgvArticulos.Columns["Imagen"].Visible = false;
+                dgvArticulos.Columns["Imagen"].Visible = false;
                 dgvArticulos.Columns["Id"].Visible = false;
-                //cargarImagen(listaArticulo[0].Imagenes[0].Url);
+                cargarImagen(listaArticulo[0].Imagen);
             }
             catch (Exception ex)
             {
@@ -52,9 +52,7 @@ namespace Actividad_2
             }
             catch (Exception)
             {
-               //picBoxArticulos.Load("https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png");
-                picBoxArticulos.Load("https://t4.ftcdn.net/jpg/05/17/53/57/360_F_517535712_q7f9QC9X6TQxWi6xYZZbMmw5cnLMr279.jpg");
-
+               picBoxArticulos.Load("https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png");
             }
         }
 
@@ -80,6 +78,13 @@ namespace Actividad_2
 
         }
 
+        private void btnAgregarArticulo_Click(object sender, EventArgs e)
+        {
+            FormAgregarArticulo nuevoArticulo = new FormAgregarArticulo();
+            nuevoArticulo.ShowDialog();
+            cargar();
+        }
+
         private void btnModificarArticulo_Click(object sender, EventArgs e)
         {
 
@@ -90,15 +95,15 @@ namespace Actividad_2
             modificarArticulo.ShowDialog();
             cargar();
         }
-        /*
+
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
         {
             if(dgvArticulos.CurrentRow != null)
             {
                 Articulo seleccion = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
-                cargarImagen(seleccion.Imagenes);
+                cargarImagen(seleccion.Imagen);
             }
-        }*/
+        }
 
         private void btnEliminarArticulo_Click(object sender, EventArgs e)
         {
@@ -122,12 +127,6 @@ namespace Actividad_2
 
                 MessageBox.Show(ex.ToString());
             }
-        }
-
-        private void btnAgregar2_Click(object sender, EventArgs e)
-        {
-            FormAgregarArticulo2 formAgregarArticulo2 = new FormAgregarArticulo2();
-            formAgregarArticulo2.ShowDialog();
         }
     }
 }

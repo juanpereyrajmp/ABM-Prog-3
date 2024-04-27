@@ -28,28 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.lblModificarMarca = new System.Windows.Forms.Label();
             this.txtMarca = new System.Windows.Forms.TextBox();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
             this.dgvMarcas = new System.Windows.Forms.DataGridView();
-            this.lblDescMarca = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).BeginInit();
             this.SuspendLayout();
             // 
+            // lblModificarMarca
+            // 
+            this.lblModificarMarca.AutoSize = true;
+            this.lblModificarMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModificarMarca.Location = new System.Drawing.Point(77, 40);
+            this.lblModificarMarca.Name = "lblModificarMarca";
+            this.lblModificarMarca.Size = new System.Drawing.Size(133, 25);
+            this.lblModificarMarca.TabIndex = 0;
+            this.lblModificarMarca.Text = "Editar marca";
+            // 
             // txtMarca
             // 
-            this.txtMarca.Location = new System.Drawing.Point(14, 56);
+            this.txtMarca.Location = new System.Drawing.Point(33, 102);
             this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(182, 20);
+            this.txtMarca.Size = new System.Drawing.Size(127, 20);
             this.txtMarca.TabIndex = 1;
             // 
             // btnEditar
             // 
-            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(14, 112);
+            this.btnEditar.Location = new System.Drawing.Point(188, 102);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(182, 42);
+            this.btnEditar.Size = new System.Drawing.Size(85, 35);
             this.btnEditar.TabIndex = 2;
             this.btnEditar.Text = "Confirmar";
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -57,11 +65,9 @@
             // 
             // btnVolver
             // 
-            this.btnVolver.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(14, 158);
+            this.btnVolver.Location = new System.Drawing.Point(188, 347);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(182, 42);
+            this.btnVolver.Size = new System.Drawing.Size(85, 35);
             this.btnVolver.TabIndex = 3;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
@@ -69,42 +75,29 @@
             // 
             // dgvMarcas
             // 
-            this.dgvMarcas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvMarcas.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dgvMarcas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMarcas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvMarcas.Location = new System.Drawing.Point(214, 11);
+            this.dgvMarcas.Location = new System.Drawing.Point(33, 165);
             this.dgvMarcas.MultiSelect = false;
             this.dgvMarcas.Name = "dgvMarcas";
             this.dgvMarcas.ReadOnly = true;
             this.dgvMarcas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMarcas.Size = new System.Drawing.Size(234, 230);
+            this.dgvMarcas.Size = new System.Drawing.Size(240, 150);
             this.dgvMarcas.TabIndex = 4;
             this.dgvMarcas.SelectionChanged += new System.EventHandler(this.dgvMarcas_SelectionChanged);
-            // 
-            // lblDescMarca
-            // 
-            this.lblDescMarca.AutoSize = true;
-            this.lblDescMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescMarca.Location = new System.Drawing.Point(65, 38);
-            this.lblDescMarca.Name = "lblDescMarca";
-            this.lblDescMarca.Size = new System.Drawing.Size(79, 16);
-            this.lblDescMarca.TabIndex = 5;
-            this.lblDescMarca.Text = "Descripción";
             // 
             // FormEditarMarca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(462, 258);
-            this.Controls.Add(this.lblDescMarca);
+            this.ClientSize = new System.Drawing.Size(319, 417);
             this.Controls.Add(this.dgvMarcas);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.txtMarca);
-            this.MaximumSize = new System.Drawing.Size(478, 297);
-            this.MinimumSize = new System.Drawing.Size(478, 297);
+            this.Controls.Add(this.lblModificarMarca);
+            this.MaximumSize = new System.Drawing.Size(335, 456);
+            this.MinimumSize = new System.Drawing.Size(335, 456);
             this.Name = "FormEditarMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar marca";
@@ -116,10 +109,11 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Label lblModificarMarca;
         private System.Windows.Forms.TextBox txtMarca;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.DataGridView dgvMarcas;
-        private System.Windows.Forms.Label lblDescMarca;
     }
 }

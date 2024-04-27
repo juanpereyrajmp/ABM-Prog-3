@@ -47,7 +47,7 @@ namespace Actividad_2
                 articulo.Nombre = txtBoxNombre.Text;
                 articulo.Descripcion = txtBoxDescripcion.Text;
                 articulo.Precio = decimal.Parse(txtBoxPrecio.Text);
-                articulo.Imagenes[0].Url = (String)txtBoxImagen.Text;
+                articulo.Imagen = (string)txtBoxImagen.Text;
                 articulo.Marca = (Marca)cboMarca.SelectedItem;
                 articulo.Categoria = (Categoria)cboCategoria.SelectedItem;
 
@@ -93,7 +93,7 @@ namespace Actividad_2
                     txtBoxNombre.Text = articulo.Nombre;
                     txtBoxDescripcion.Text = articulo.Descripcion;
                     txtBoxPrecio.Text = articulo.Precio.ToString();
-                    cargarImagen(articulo.Imagenes[0].Url);
+                    cargarImagen(articulo.Imagen);
                     cboMarca.SelectedValue = articulo.Marca.Id;
                     cboCategoria.SelectedValue = articulo.Categoria.Id;
                 }
