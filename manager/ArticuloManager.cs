@@ -98,50 +98,6 @@ namespace manager
                 datos.cerrarConexion();
             }
         }
-
-        public void ModificarArticulo(Articulo modificar)
-        {
-            AccesoDatos datos = new AccesoDatos();
-
-            try
-            {
-                datos.setearConsulta("UPDATE ARTICULOS SET Codigo = @codigo, Nombre = @nombre, Descripcion = @descripcion, IdMarca = @idMarca, IdCategoria = @idCategoria, Precio = @precio WHERE Id = @id");
-                datos.setearParametro("@codigo", modificar.Codigo);
-                datos.setearParametro("@nombre", modificar.Nombre);
-                datos.setearParametro("@descripcion", modificar.Descripcion);
-                datos.setearParametro("@idMarca", modificar.Marca.Id);
-                datos.setearParametro("@idCategoria", modificar.Categoria.Id);
-                datos.setearParametro("@precio", modificar.Precio);
-                datos.setearParametro("@id", modificar.Id);
-                datos.ejecutarAccion();
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
-            finally
-            {
-                datos.cerrarConexion();
-            }
-        }
-
-        public void EliminarArticulo(int id)
-        {
-            try
-            {
-                AccesoDatos datos = new AccesoDatos();
-                datos.setearConsulta("DELETE FROM ARTICULOS WHERE id = @id");
-                datos.setearParametro("@id", id);
-                datos.ejecutarAccion();
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
-        }
-
         public void agregarImagen(Articulo nuevoArticulo)
         {
             Articulo articulo = new Articulo();
@@ -167,14 +123,38 @@ namespace manager
             }
         }
 
-        public void agregarNuevaImagen(Articulo nuevoArticulo)
-        {     
+
+
+        public void EliminarArticulo(int id)
+        {
             try
             {
-                datos.setearConsulta("UPDATE IMAGENES SET ImagenUrl = @ImagenUrl WHERE Id = (SELECT TOP 1 Id FROM IMAGENES WHERE IdArticulo = @IdA)");
-                datos.setearParametro("@IdA", nuevoArticulo.Id);
-                datos.setearParametro("@ImagenUrl", nuevoArticulo.Imagen);
-                datos.cerrarConexion();
+                AccesoDatos datos = new AccesoDatos();
+                datos.setearConsulta("DELETE FROM ARTICULOS WHERE id = @id");
+                datos.setearParametro("@id", id);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public void ModificarArticulo(Articulo modificar)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("UPDATE ARTICULOS SET Codigo = @codigo, Nombre = @nombre, Descripcion = @descripcion, IdMarca = @idMarca, IdCategoria = @idCategoria, Precio = @precio WHERE Id = @Id");
+                datos.setearParametro("@codigo", modificar.Codigo);
+                datos.setearParametro("@nombre", modificar.Nombre);
+                datos.setearParametro("@descripcion", modificar.Descripcion);
+                datos.setearParametro("@idMarca", modificar.Marca.Id);
+                datos.setearParametro("@IdCategoria", modificar.Categoria.Id);
+                datos.setearParametro("@precio", modificar.Precio);
+                datos.setearParametro("@Id", modificar.Id); 
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
@@ -186,5 +166,25 @@ namespace manager
                 datos.cerrarConexion();
             }
         }
+        public void modificarImagenArticulo(Articulo articulo)
+        {
+            try
+            {
+                datos.setearConsulta("UPDATE IMAGENES SET ImagenUrl = @ImagenUrl WHERE Id = (SELECT TOP 1 Id FROM IMAGENES WHERE IdArticulo = @IdA)");
+                datos.setearParametro("@IdA", articulo.Id);
+                datos.setearParametro("@ImagenUrl", articulo.Imagen);
+                datos.cerrarConexion(); 
+                datos.ejecutarAccion();
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+
     }
 }

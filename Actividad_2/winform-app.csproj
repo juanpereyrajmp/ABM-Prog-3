@@ -94,6 +94,12 @@
     <Compile Include="FormEditarMarca.Designer.cs">
       <DependentUpon>FormEditarMarca.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormEliminarArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEliminarArticulo.Designer.cs">
+      <DependentUpon>FormEliminarArticulo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormEliminarCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,12 @@
     </Compile>
     <Compile Include="FormMarcas.Designer.cs">
       <DependentUpon>FormMarcas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormModificarArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModificarArticulo.Designer.cs">
+      <DependentUpon>FormModificarArticulo.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

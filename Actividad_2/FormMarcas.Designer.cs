@@ -37,9 +37,11 @@
             // 
             // btnAgregarMarca
             // 
-            this.btnAgregarMarca.Location = new System.Drawing.Point(83, 70);
+            this.btnAgregarMarca.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregarMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarMarca.Location = new System.Drawing.Point(169, 111);
             this.btnAgregarMarca.Name = "btnAgregarMarca";
-            this.btnAgregarMarca.Size = new System.Drawing.Size(116, 41);
+            this.btnAgregarMarca.Size = new System.Drawing.Size(182, 42);
             this.btnAgregarMarca.TabIndex = 0;
             this.btnAgregarMarca.Text = "Agregar marca";
             this.btnAgregarMarca.UseVisualStyleBackColor = true;
@@ -47,20 +49,25 @@
             // 
             // dgdMarcas
             // 
+            this.dgdMarcas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgdMarcas.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgdMarcas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgdMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgdMarcas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgdMarcas.Location = new System.Drawing.Point(439, 70);
+            this.dgdMarcas.Location = new System.Drawing.Point(443, 24);
             this.dgdMarcas.MultiSelect = false;
             this.dgdMarcas.Name = "dgdMarcas";
             this.dgdMarcas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgdMarcas.Size = new System.Drawing.Size(262, 288);
+            this.dgdMarcas.Size = new System.Drawing.Size(234, 401);
             this.dgdMarcas.TabIndex = 1;
             // 
             // btnModificarMarca
             // 
-            this.btnModificarMarca.Location = new System.Drawing.Point(83, 117);
+            this.btnModificarMarca.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModificarMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarMarca.Location = new System.Drawing.Point(169, 192);
             this.btnModificarMarca.Name = "btnModificarMarca";
-            this.btnModificarMarca.Size = new System.Drawing.Size(116, 41);
+            this.btnModificarMarca.Size = new System.Drawing.Size(182, 42);
             this.btnModificarMarca.TabIndex = 2;
             this.btnModificarMarca.Text = "Modificar marca";
             this.btnModificarMarca.UseVisualStyleBackColor = true;
@@ -68,9 +75,11 @@
             // 
             // btnEliminarMarca
             // 
-            this.btnEliminarMarca.Location = new System.Drawing.Point(83, 164);
+            this.btnEliminarMarca.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminarMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarMarca.Location = new System.Drawing.Point(169, 274);
             this.btnEliminarMarca.Name = "btnEliminarMarca";
-            this.btnEliminarMarca.Size = new System.Drawing.Size(116, 41);
+            this.btnEliminarMarca.Size = new System.Drawing.Size(182, 42);
             this.btnEliminarMarca.TabIndex = 3;
             this.btnEliminarMarca.Text = "Eliminar marca";
             this.btnEliminarMarca.UseVisualStyleBackColor = true;
@@ -80,6 +89,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(861, 484);
             this.Controls.Add(this.btnEliminarMarca);
             this.Controls.Add(this.btnModificarMarca);
