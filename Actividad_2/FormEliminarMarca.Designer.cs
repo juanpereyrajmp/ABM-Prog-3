@@ -36,20 +36,25 @@
             // 
             // dgvEliminarMarca
             // 
+            this.dgvEliminarMarca.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvEliminarMarca.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvEliminarMarca.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvEliminarMarca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEliminarMarca.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvEliminarMarca.Location = new System.Drawing.Point(38, 34);
+            this.dgvEliminarMarca.Location = new System.Drawing.Point(230, 26);
             this.dgvEliminarMarca.MultiSelect = false;
             this.dgvEliminarMarca.Name = "dgvEliminarMarca";
             this.dgvEliminarMarca.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEliminarMarca.Size = new System.Drawing.Size(279, 226);
+            this.dgvEliminarMarca.Size = new System.Drawing.Size(234, 230);
             this.dgvEliminarMarca.TabIndex = 0;
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(372, 71);
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Location = new System.Drawing.Point(25, 26);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(84, 37);
+            this.btnEliminar.Size = new System.Drawing.Size(182, 42);
             this.btnEliminar.TabIndex = 1;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -57,9 +62,11 @@
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(372, 172);
+            this.btnVolver.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.Location = new System.Drawing.Point(25, 83);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(84, 37);
+            this.btnVolver.Size = new System.Drawing.Size(182, 42);
             this.btnVolver.TabIndex = 2;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
@@ -69,12 +76,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(500, 309);
+            this.ClientSize = new System.Drawing.Size(485, 287);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.dgvEliminarMarca);
-            this.MaximumSize = new System.Drawing.Size(516, 348);
-            this.MinimumSize = new System.Drawing.Size(516, 348);
+            this.MaximumSize = new System.Drawing.Size(501, 326);
+            this.MinimumSize = new System.Drawing.Size(501, 326);
             this.Name = "FormEliminarMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Eliminar marca";

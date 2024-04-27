@@ -37,18 +37,20 @@
             // lblTituloAgregarMarca
             // 
             this.lblTituloAgregarMarca.AutoSize = true;
-            this.lblTituloAgregarMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloAgregarMarca.Location = new System.Drawing.Point(30, 47);
+            this.lblTituloAgregarMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloAgregarMarca.Location = new System.Drawing.Point(36, 44);
             this.lblTituloAgregarMarca.Name = "lblTituloAgregarMarca";
-            this.lblTituloAgregarMarca.Size = new System.Drawing.Size(148, 25);
+            this.lblTituloAgregarMarca.Size = new System.Drawing.Size(88, 16);
             this.lblTituloAgregarMarca.TabIndex = 0;
-            this.lblTituloAgregarMarca.Text = "Ingrese marca";
+            this.lblTituloAgregarMarca.Text = "Nueva Marca";
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(238, 104);
+            this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Location = new System.Drawing.Point(39, 80);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(85, 38);
+            this.btnAgregar.Size = new System.Drawing.Size(182, 42);
             this.btnAgregar.TabIndex = 1;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -56,9 +58,11 @@
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(59, 104);
+            this.btnVolver.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.Location = new System.Drawing.Point(225, 80);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(85, 38);
+            this.btnVolver.Size = new System.Drawing.Size(182, 42);
             this.btnVolver.TabIndex = 2;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
@@ -66,22 +70,22 @@
             // 
             // txtAgregarMarca
             // 
-            this.txtAgregarMarca.Location = new System.Drawing.Point(193, 52);
+            this.txtAgregarMarca.Location = new System.Drawing.Point(130, 43);
             this.txtAgregarMarca.Name = "txtAgregarMarca";
-            this.txtAgregarMarca.Size = new System.Drawing.Size(130, 20);
+            this.txtAgregarMarca.Size = new System.Drawing.Size(284, 20);
             this.txtAgregarMarca.TabIndex = 3;
             // 
             // FormAgregarMarca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(366, 179);
+            this.ClientSize = new System.Drawing.Size(456, 164);
             this.Controls.Add(this.txtAgregarMarca);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.lblTituloAgregarMarca);
-            this.MaximumSize = new System.Drawing.Size(382, 218);
-            this.MinimumSize = new System.Drawing.Size(382, 218);
+            this.MaximumSize = new System.Drawing.Size(472, 203);
+            this.MinimumSize = new System.Drawing.Size(472, 203);
             this.Name = "FormAgregarMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar marca";
