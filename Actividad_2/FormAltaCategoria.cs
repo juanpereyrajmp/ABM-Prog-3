@@ -27,13 +27,33 @@ namespace Actividad_2
         {
 
             Categoria categoria = new Categoria();
-            CategoriaManager manager = new CategoriaManager();  
+            CategoriaManager manager = new CategoriaManager();
+            List<Categoria> lista = new List<Categoria>();
+
+            lista = manager.listar();
             try
             {
                 categoria.Descripcion = textBoxCategoria.Text;
-                manager.agregar(categoria);
-                MessageBox.Show("Agregado exitosamente");
-                Close();
+                if (categoria.Descripcion == "")
+                {
+                    MessageBox.Show("El campo no puede estar vacio");
+                }
+                else
+                {
+                    if(!lista.Any(m => m.Descripcion.Equals(categoria.Descripcion, StringComparison.OrdinalIgnoreCase)))
+                            {
+                        manager.agregar(categoria);
+                        MessageBox.Show("Agregada");
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Esa Categoria ya existe");
+                    }
+                }
+                //manager.agregar(categoria);
+               // MessageBox.Show("Agregado exitosamente");
+               // Close();
 
             }
             catch (Exception ex)
