@@ -36,24 +36,26 @@
             this.panelTitulo = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panelPrincipalDesktop = new System.Windows.Forms.Panel();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelTitulo.SuspendLayout();
+            this.panelLogo.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnArticulos
             // 
             this.btnArticulos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.btnArticulos.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnArticulos.FlatAppearance.BorderSize = 0;
             this.btnArticulos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnArticulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnArticulos.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnArticulos.Image = global::Actividad_2.Properties.Resources.icon_articulo;
             this.btnArticulos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnArticulos.Location = new System.Drawing.Point(0, 0);
+            this.btnArticulos.Location = new System.Drawing.Point(12, 160);
             this.btnArticulos.Name = "btnArticulos";
-            this.btnArticulos.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
-            this.btnArticulos.Size = new System.Drawing.Size(220, 129);
+            this.btnArticulos.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
+            this.btnArticulos.Size = new System.Drawing.Size(190, 100);
             this.btnArticulos.TabIndex = 0;
             this.btnArticulos.Text = "  Articulos";
             this.btnArticulos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -65,28 +67,28 @@
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.panelMenu.Controls.Add(this.btnMarcas);
-            this.panelMenu.Controls.Add(this.btnCategorias);
+            this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Controls.Add(this.btnArticulos);
+            this.panelMenu.Controls.Add(this.btnCategorias);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(220, 593);
+            this.panelMenu.Size = new System.Drawing.Size(214, 593);
             this.panelMenu.TabIndex = 5;
             // 
             // btnMarcas
             // 
             this.btnMarcas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.btnMarcas.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnMarcas.FlatAppearance.BorderSize = 0;
             this.btnMarcas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMarcas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMarcas.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnMarcas.Image = ((System.Drawing.Image)(resources.GetObject("btnMarcas.Image")));
             this.btnMarcas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMarcas.Location = new System.Drawing.Point(0, 258);
+            this.btnMarcas.Location = new System.Drawing.Point(12, 372);
             this.btnMarcas.Name = "btnMarcas";
-            this.btnMarcas.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
-            this.btnMarcas.Size = new System.Drawing.Size(220, 129);
+            this.btnMarcas.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
+            this.btnMarcas.Size = new System.Drawing.Size(190, 100);
             this.btnMarcas.TabIndex = 2;
             this.btnMarcas.Text = "  Marcas";
             this.btnMarcas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -97,17 +99,16 @@
             // btnCategorias
             // 
             this.btnCategorias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.btnCategorias.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCategorias.FlatAppearance.BorderSize = 0;
             this.btnCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCategorias.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnCategorias.Image = ((System.Drawing.Image)(resources.GetObject("btnCategorias.Image")));
             this.btnCategorias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCategorias.Location = new System.Drawing.Point(0, 129);
+            this.btnCategorias.Location = new System.Drawing.Point(12, 266);
             this.btnCategorias.Name = "btnCategorias";
-            this.btnCategorias.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
-            this.btnCategorias.Size = new System.Drawing.Size(220, 129);
+            this.btnCategorias.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
+            this.btnCategorias.Size = new System.Drawing.Size(190, 100);
             this.btnCategorias.TabIndex = 1;
             this.btnCategorias.Text = "  Categorias";
             this.btnCategorias.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -117,12 +118,12 @@
             // 
             // panelTitulo
             // 
-            this.panelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(151)))), ((int)(((byte)(250)))));
+            this.panelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.panelTitulo.Controls.Add(this.lblTitle);
             this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitulo.Location = new System.Drawing.Point(220, 0);
+            this.panelTitulo.Location = new System.Drawing.Point(214, 0);
             this.panelTitulo.Name = "panelTitulo";
-            this.panelTitulo.Size = new System.Drawing.Size(874, 80);
+            this.panelTitulo.Size = new System.Drawing.Size(880, 80);
             this.panelTitulo.TabIndex = 6;
             // 
             // lblTitle
@@ -137,11 +138,31 @@
             // panelPrincipalDesktop
             // 
             this.panelPrincipalDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelPrincipalDesktop.Location = new System.Drawing.Point(220, 80);
+            this.panelPrincipalDesktop.Location = new System.Drawing.Point(214, 80);
             this.panelPrincipalDesktop.MaximumSize = new System.Drawing.Size(1500, 1500);
             this.panelPrincipalDesktop.Name = "panelPrincipalDesktop";
-            this.panelPrincipalDesktop.Size = new System.Drawing.Size(874, 513);
+            this.panelPrincipalDesktop.Size = new System.Drawing.Size(880, 513);
             this.panelPrincipalDesktop.TabIndex = 7;
+            // 
+            // panelLogo
+            // 
+            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.panelLogo.Controls.Add(this.lblTitulo);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(214, 80);
+            this.panelLogo.TabIndex = 0;
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(33, 29);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(147, 25);
+            this.lblTitulo.TabIndex = 0;
+            this.lblTitulo.Text = "AJR Solutions";
             // 
             // Form1
             // 
@@ -163,6 +184,8 @@
             this.panelMenu.ResumeLayout(false);
             this.panelTitulo.ResumeLayout(false);
             this.panelTitulo.PerformLayout();
+            this.panelLogo.ResumeLayout(false);
+            this.panelLogo.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -176,6 +199,8 @@
         private System.Windows.Forms.Panel panelTitulo;
         private System.Windows.Forms.Panel panelPrincipalDesktop;
         private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Panel panelLogo;
+        private System.Windows.Forms.Label lblTitulo;
     }
 }
 
