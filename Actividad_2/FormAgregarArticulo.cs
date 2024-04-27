@@ -54,9 +54,8 @@ namespace Actividad_2
                 if(articulo.Id != 0)
                 {
                     manager.ModificarArticulo(articulo);
-                    imagenes.agregarImagen(articulo);
+                    imagenes.agregarNuevaImagen(articulo);
                     MessageBox.Show("Articulo modificado con éxito");
-
                 }
                 else
                 {
@@ -65,6 +64,7 @@ namespace Actividad_2
                     MessageBox.Show("Articulo agregado con éxito");
                 }
                 Close();
+
             }
             catch (Exception ex)
             {

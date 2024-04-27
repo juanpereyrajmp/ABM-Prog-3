@@ -166,5 +166,25 @@ namespace manager
                 datos.cerrarConexion();
             }
         }
+
+        public void agregarNuevaImagen(Articulo nuevoArticulo)
+        {     
+            try
+            {
+                datos.setearConsulta("UPDATE IMAGENES SET ImagenUrl = @ImagenUrl WHERE Id = (SELECT TOP 1 Id FROM IMAGENES WHERE IdArticulo = @IdA)");
+                datos.setearParametro("@IdA", nuevoArticulo.Id);
+                datos.setearParametro("@ImagenUrl", nuevoArticulo.Imagen);
+                datos.cerrarConexion();
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
 }
