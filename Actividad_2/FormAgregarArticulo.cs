@@ -61,24 +61,20 @@ namespace Actividad_2
                     articulo = new Articulo();
                 }
 
-                if(validarVacio(txtBoxCodigo.Text))
+                /*if(validarVacio(txtBoxCodigo.Text))
                 {
                     MessageBox.Show("El Codigo no puede estar vacio");
-                }
-                else
-                {
-
-                }
+                }*/
                 articulo.Codigo = txtBoxCodigo.Text;
                 articulo.Codigo = txtBoxCodigo.Text;
                 articulo.Codigo = txtBoxCodigo.Text;
                 articulo.Nombre = txtBoxNombre.Text;
                 articulo.Descripcion = txtBoxDescripcion.Text;
-                if (validarNegativo(decimal.Parse(txtBoxPrecio.Text)))
+                /*if (validarNegativo(decimal.Parse(txtBoxPrecio.Text)))
                 {
                     MessageBox.Show("El Precio no puede ser Negativo");
                     Close();
-                }
+                }*/
                 articulo.Precio = decimal.Parse(txtBoxPrecio.Text);
                 articulo.Imagen = (string)txtBoxImagen.Text;
                 articulo.Marca = (Marca)cboMarca.SelectedItem;
@@ -91,12 +87,22 @@ namespace Actividad_2
                     MessageBox.Show("Articulo modificado con éxito");
 
                 }
+                else if ((validarVacio(txtBoxCodigo.Text)))
+                    {
+                    MessageBox.Show("El Codigo no puede estar vacio - Vuelva a Agregar el Articulo");
+                    }
+                    else if (validarNegativo(decimal.Parse(txtBoxPrecio.Text)))
+                    {
+                     MessageBox.Show("El Precio no puede ser Negativo - Vuela a Agregar el Articulo");
+
+                    }
+
                 else
-                {
+                   {
                     manager.AgregarArticulo(articulo);
                     imagenes.agregarImagen(articulo);
                     MessageBox.Show("Articulo agregado con éxito");
-                }
+                   }
                 Close();
             }
             catch (Exception ex)
