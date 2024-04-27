@@ -19,6 +19,23 @@ namespace Actividad_2
         {
             InitializeComponent();
         }
+        private bool validarVacio(string texto)
+        {
+            if (string.IsNullOrEmpty(texto))
+            {
+                return true;
+            }
+            return false;
+        }
+        private bool validarNegativo(decimal num)
+        {
+            
+            if(num < 0)
+            {
+                return true;
+            }
+            return false;
+        }
 
         public FormAgregarArticulo(Articulo articulo)
         {
@@ -43,15 +60,31 @@ namespace Actividad_2
                 {
                     articulo = new Articulo();
                 }
+
+                if(validarVacio(txtBoxCodigo.Text))
+                {
+                    MessageBox.Show("El Codigo no puede estar vacio");
+                }
+                else
+                {
+
+                }
+                articulo.Codigo = txtBoxCodigo.Text;
+                articulo.Codigo = txtBoxCodigo.Text;
                 articulo.Codigo = txtBoxCodigo.Text;
                 articulo.Nombre = txtBoxNombre.Text;
                 articulo.Descripcion = txtBoxDescripcion.Text;
+                if (validarNegativo(decimal.Parse(txtBoxPrecio.Text)))
+                {
+                    MessageBox.Show("El Precio no puede ser Negativo");
+                    Close();
+                }
                 articulo.Precio = decimal.Parse(txtBoxPrecio.Text);
                 articulo.Imagen = (string)txtBoxImagen.Text;
                 articulo.Marca = (Marca)cboMarca.SelectedItem;
                 articulo.Categoria = (Categoria)cboCategoria.SelectedItem;
 
-                if(articulo.Id != 0)
+                if(articulo.Id != 0 && validarVacio(txtBoxCodigo.Text))
                 {
                     manager.ModificarArticulo(articulo);
                     imagenes.modificarImagenArticulo(articulo);
@@ -118,7 +151,8 @@ namespace Actividad_2
             }
             catch (Exception)
             {
-                pbxArticulo.Load("https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png");
+                //pbxArticulo.Load("https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png");
+                pbxArticulo.Load("https://t4.ftcdn.net/jpg/05/17/53/57/360_F_517535712_q7f9QC9X6TQxWi6xYZZbMmw5cnLMr279.jpg");
             }
         }
     }
