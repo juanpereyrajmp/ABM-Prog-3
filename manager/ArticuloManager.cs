@@ -60,7 +60,7 @@ namespace manager
 
                     if (!Convert.IsDBNull(datos.Lector["ImagenUrl"]))
                     {
-                        aux.Imagen = (string)datos.Lector["ImagenUrl"];
+                        aux.Imagenes[0].Url = (String)datos.Lector["ImagenUrl"];
                     }
 
                     lista.Add(aux);
@@ -152,7 +152,7 @@ namespace manager
                 int idArticulo = articulo.Id;
                 datos.setearConsulta("INSERT INTO IMAGENES (IdArticulo, ImagenUrl) VALUES (@IdArticulo, @ImagenUrl)");
                 datos.setearParametro("@IdArticulo", idArticulo);
-                datos.setearParametro("@ImagenUrl", nuevoArticulo.Imagen);
+                datos.setearParametro("@ImagenUrl", nuevoArticulo.Imagenes);
                 datos.cerrarConexion();
                 datos.ejecutarAccion();
             }

@@ -17,17 +17,18 @@ namespace dominio
             Descripcion = "";
             Marca = new Marca();
             Categoria = new Categoria();
-            Imagen = "";
+            Imagenes = new List<Imagen> ();
             Precio = 0;
         }
-        public Articulo(string codigoArt, string nombreArt, string descripcionArt, Marca marcaArt, Categoria categoriaArt, string imagenes, decimal precio)
+        public Articulo(string codigoArt, string nombreArt, string descripcionArt, Marca marcaArt, Categoria categoriaArt, List<Imagen> imagenes, decimal precio)
         {
             Codigo = codigoArt;
             Nombre = nombreArt;
             Descripcion = descripcionArt;
             Marca = marcaArt;
             Categoria = categoriaArt;
-            Imagen = imagenes;
+            //List<Imagen> = imagenes.Url;
+            Imagenes = imagenes;
             Precio = precio;
         }
         public int Id { get; set; }
@@ -40,8 +41,8 @@ namespace dominio
         [DisplayName("Categoría")]
         public Categoria Categoria { get; set; }
         [DisplayName("Imágenes")]
-        public List<string> Imagenes { get; set; }
-        public string Imagen { get; set; }
+        public List<Imagen> Imagenes { get; set; }
+        //public string Imagen { get; set; }
         public decimal Precio { get; set; }
 
     }
