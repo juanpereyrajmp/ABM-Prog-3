@@ -18,10 +18,7 @@ namespace Actividad_2
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -36,20 +33,26 @@ namespace Actividad_2
                 categoria.Descripcion = textBoxCategoria.Text;
                 if (categoria.Descripcion == "")
                 {
-                    MessageBox.Show("El campo no puede estar vacio");
+                    MessageBox.Show("El campo no puede estar vacio", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (textBoxCategoria.Text.Trim().Length == 0)
+                {
+                    MessageBox.Show("No se permiten espacios en blanco.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    textBoxCategoria.Clear();
                 }
                 else
                 {
-                    if(!lista.Any(m => m.Descripcion.Equals(categoria.Descripcion, StringComparison.OrdinalIgnoreCase)))
-                            {
+                    if (!lista.Any(m => m.Descripcion.Equals(categoria.Descripcion, StringComparison.OrdinalIgnoreCase)))
+                    {
                         manager.agregar(categoria);
                         MessageBox.Show("Agregada");
                         Close();
                     }
                     else
                     {
-                        MessageBox.Show("Esa Categoria ya existe");
+                        MessageBox.Show("Esa Categoria ya existe","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+
                 }
                 //manager.agregar(categoria);
                // MessageBox.Show("Agregado exitosamente");

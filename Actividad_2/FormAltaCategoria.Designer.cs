@@ -44,7 +44,7 @@
             this.labelDescpCategoria.Size = new System.Drawing.Size(109, 16);
             this.labelDescpCategoria.TabIndex = 0;
             this.labelDescpCategoria.Text = "Nueva Categoría";
-            this.labelDescpCategoria.Click += new System.EventHandler(this.label1_Click);
+     
             // 
             // textBoxCategoria
             // 

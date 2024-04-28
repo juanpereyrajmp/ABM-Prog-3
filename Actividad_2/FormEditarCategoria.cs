@@ -56,15 +56,21 @@ namespace Actividad_2
                 descripcion = textBoxEditarCategoria.Text;
                 if (descripcion == "")
                 {
-                    MessageBox.Show("El campo no puede estar vacio");
+                    MessageBox.Show("El campo no puede estar vacio", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (textBoxEditarCategoria.Text.Trim().Length == 0)
+                {
+
+                    MessageBox.Show("No se permiten espacios en blanco.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    textBoxEditarCategoria.Clear();
+                    
                 }
                 else
                 {
                     bool validar = listaArticulos.Any(item => item.Categoria.Descripcion == descripcion);
-
                     if (validar)
                     {
-                        MessageBox.Show("Ya existe esa categoria");
+                        MessageBox.Show("Ya existe esa categoria", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {

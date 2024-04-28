@@ -39,23 +39,43 @@ namespace Actividad_2
             CategoriaManager categoriamanager = new CategoriaManager();
 
             List<Articulo> listaArticulos = articuloManager.ListarArticulos();
+            
 
-
-            bool enUso = listaArticulos.Any(item => item.Categoria.Descripcion == seleccionada.Descripcion);
-
-
-            if (!enUso)
+            try
             {
-                categoriamanager.eliminarCategoria(seleccionada.Id);
-                MessageBox.Show("Categoria eliminada correctamente");
-            }
-            else
-            {
-                MessageBox.Show("No se puede eliminar una categoria en uso");
-            }
+                DialogResult respuesta = MessageBox.Show("¿Seguro querés eliminar la categoria seleccionada?", "Eliminado", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+               
+                if (respuesta == DialogResult.Yes)
+                {
+                    bool enUso = listaArticulos.Any(item => item.Categoria.Descripcion == seleccionada.Descripcion);
+                    if (!enUso)
+                    {
+                        categoriamanager.eliminarCategoria(seleccionada.Id);
+                        MessageBox.Show("Categoria eliminada correctamente");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se puede eliminar una categoria en uso");
+                    }
 
-            List<Categoria> listaCategoria = categoriamanager.listar();
-            dgvEliminarCategoria.DataSource = listaCategoria;
+                    List<Categoria> listaCategoria = categoriamanager.listar();
+                    dgvEliminarCategoria.DataSource = listaCategoria;
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+            
+
+
+            //bool enUso = listaArticulos.Any(item => item.Categoria.Descripcion == seleccionada.Descripcion);
+
+
+            
         }
     }
 }

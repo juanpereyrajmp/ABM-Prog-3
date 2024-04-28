@@ -134,8 +134,8 @@ namespace manager
             try
             {
                 AccesoDatos datos = new AccesoDatos();
-                datos.setearConsulta("DELETE FROM ARTICULOS WHERE id = @id");
-                datos.setearParametro("@id", id);
+                datos.setearConsulta("DELETE FROM ARTICULOS WHERE Id = @Id");
+                datos.setearParametro("@Id", id);
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
