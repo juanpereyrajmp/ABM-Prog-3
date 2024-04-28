@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
             this.btnEliminarArticulo = new System.Windows.Forms.Button();
             this.btnModificarArticulo = new System.Windows.Forms.Button();
@@ -36,7 +36,7 @@
             this.picBoxArticulos = new System.Windows.Forms.PictureBox();
             this.labelFiltro = new System.Windows.Forms.Label();
             this.textBoxFiltro = new System.Windows.Forms.TextBox();
-            this.btnAgregarImg = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxArticulos)).BeginInit();
             this.SuspendLayout();
@@ -46,23 +46,21 @@
             this.dgvArticulos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvArticulos.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvArticulos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvArticulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvArticulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvArticulos.Location = new System.Drawing.Point(13, 81);
-            this.dgvArticulos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvArticulos.Location = new System.Drawing.Point(10, 66);
             this.dgvArticulos.MultiSelect = false;
             this.dgvArticulos.Name = "dgvArticulos";
-            this.dgvArticulos.RowHeadersWidth = 51;
             this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvArticulos.Size = new System.Drawing.Size(761, 390);
+            this.dgvArticulos.Size = new System.Drawing.Size(571, 317);
             this.dgvArticulos.TabIndex = 1;
             this.dgvArticulos.SelectionChanged += new System.EventHandler(this.dgvArticulos_SelectionChanged);
             // 
@@ -70,10 +68,9 @@
             // 
             this.btnEliminarArticulo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminarArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarArticulo.Location = new System.Drawing.Point(803, 479);
-            this.btnEliminarArticulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminarArticulo.Location = new System.Drawing.Point(429, 411);
             this.btnEliminarArticulo.Name = "btnEliminarArticulo";
-            this.btnEliminarArticulo.Size = new System.Drawing.Size(243, 52);
+            this.btnEliminarArticulo.Size = new System.Drawing.Size(152, 30);
             this.btnEliminarArticulo.TabIndex = 4;
             this.btnEliminarArticulo.Text = "Eliminar Articulo";
             this.btnEliminarArticulo.UseVisualStyleBackColor = true;
@@ -83,10 +80,9 @@
             // 
             this.btnModificarArticulo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnModificarArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarArticulo.Location = new System.Drawing.Point(477, 479);
-            this.btnModificarArticulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnModificarArticulo.Location = new System.Drawing.Point(238, 411);
             this.btnModificarArticulo.Name = "btnModificarArticulo";
-            this.btnModificarArticulo.Size = new System.Drawing.Size(243, 52);
+            this.btnModificarArticulo.Size = new System.Drawing.Size(152, 30);
             this.btnModificarArticulo.TabIndex = 3;
             this.btnModificarArticulo.Text = "Modificar Articulo";
             this.btnModificarArticulo.UseVisualStyleBackColor = true;
@@ -96,10 +92,9 @@
             // 
             this.btnAgregarArticulo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgregarArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarArticulo.Location = new System.Drawing.Point(128, 479);
-            this.btnAgregarArticulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregarArticulo.Location = new System.Drawing.Point(58, 411);
             this.btnAgregarArticulo.Name = "btnAgregarArticulo";
-            this.btnAgregarArticulo.Size = new System.Drawing.Size(243, 52);
+            this.btnAgregarArticulo.Size = new System.Drawing.Size(152, 30);
             this.btnAgregarArticulo.TabIndex = 2;
             this.btnAgregarArticulo.Text = "Agregar Articulo";
             this.btnAgregarArticulo.UseVisualStyleBackColor = true;
@@ -107,10 +102,9 @@
             // 
             // picBoxArticulos
             // 
-            this.picBoxArticulos.Location = new System.Drawing.Point(783, 81);
-            this.picBoxArticulos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picBoxArticulos.Location = new System.Drawing.Point(587, 66);
             this.picBoxArticulos.Name = "picBoxArticulos";
-            this.picBoxArticulos.Size = new System.Drawing.Size(333, 308);
+            this.picBoxArticulos.Size = new System.Drawing.Size(250, 250);
             this.picBoxArticulos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBoxArticulos.TabIndex = 7;
             this.picBoxArticulos.TabStop = false;
@@ -119,36 +113,40 @@
             // 
             this.labelFiltro.AutoSize = true;
             this.labelFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFiltro.Location = new System.Drawing.Point(87, 38);
+            this.labelFiltro.Location = new System.Drawing.Point(65, 31);
+            this.labelFiltro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelFiltro.Name = "labelFiltro";
-            this.labelFiltro.Size = new System.Drawing.Size(146, 20);
+            this.labelFiltro.Size = new System.Drawing.Size(115, 16);
             this.labelFiltro.TabIndex = 8;
             this.labelFiltro.Text = "Filtrar por Nombre";
             // 
             // textBoxFiltro
             // 
-            this.textBoxFiltro.Location = new System.Drawing.Point(245, 38);
-            this.textBoxFiltro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxFiltro.Location = new System.Drawing.Point(184, 31);
+            this.textBoxFiltro.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxFiltro.Name = "textBoxFiltro";
-            this.textBoxFiltro.Size = new System.Drawing.Size(379, 22);
+            this.textBoxFiltro.Size = new System.Drawing.Size(285, 20);
             this.textBoxFiltro.TabIndex = 0;
             this.textBoxFiltro.TextChanged += new System.EventHandler(this.textBoxFiltro_TextChanged);
             // 
-            // btnAgregarImg
+            // button1
             // 
-            this.btnAgregarImg.Location = new System.Drawing.Point(477, 538);
-            this.btnAgregarImg.Name = "btnAgregarImg";
-            this.btnAgregarImg.Size = new System.Drawing.Size(243, 37);
-            this.btnAgregarImg.TabIndex = 9;
-            this.btnAgregarImg.Text = "Agregar Imagen";
-            this.btnAgregarImg.UseVisualStyleBackColor = true;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(603, 411);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(152, 30);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Agregar imagenes";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormArticulos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1144, 585);
-            this.Controls.Add(this.btnAgregarImg);
+            this.ClientSize = new System.Drawing.Size(860, 483);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.textBoxFiltro);
             this.Controls.Add(this.labelFiltro);
             this.Controls.Add(this.picBoxArticulos);
@@ -156,11 +154,10 @@
             this.Controls.Add(this.btnModificarArticulo);
             this.Controls.Add(this.btnAgregarArticulo);
             this.Controls.Add(this.dgvArticulos);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1162, 632);
+            this.MaximumSize = new System.Drawing.Size(876, 522);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(1162, 632);
+            this.MinimumSize = new System.Drawing.Size(876, 522);
             this.Name = "FormArticulos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Artículos";
@@ -181,6 +178,6 @@
         private System.Windows.Forms.PictureBox picBoxArticulos;
         private System.Windows.Forms.Label labelFiltro;
         private System.Windows.Forms.TextBox textBoxFiltro;
-        private System.Windows.Forms.Button btnAgregarImg;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -32,32 +32,26 @@ namespace manager
                     aux.Descripcion = (string)datos.Lector["ArticuloDescripcion"];
 
                     Marca marca = new Marca();
-                    //aux.Marca = new Marca();
 
                     if (!Convert.IsDBNull(datos.Lector["Marca"]))
                     {
-                        aux.Marca = new Marca();
                         aux.Marca.Id = (int)datos.Lector["Id"];
                         aux.Marca.Descripcion = (string)datos.Lector["Marca"];
                     }
                     else
                     {
-                        aux.Marca = new Marca();
                         aux.Marca.Descripcion = "Sin Marca";
                     }
 
                     Categoria categoria = new Categoria();
-                    //aux.Categoria = new Categoria();
 
                     if (!Convert.IsDBNull(datos.Lector["Categoria"]))
                     {
-                        aux.Categoria = new Categoria();
                         aux.Categoria.Id = (int)datos.Lector["Id"];
                         aux.Categoria.Descripcion = (string)datos.Lector["Categoria"];
                     }
                     else
                     {
-                        aux.Categoria = new Categoria();
                         aux.Categoria.Descripcion = "Sin categoria";
                     }
 

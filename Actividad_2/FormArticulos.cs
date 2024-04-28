@@ -129,5 +129,20 @@ namespace Actividad_2
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(FormAgregarImagen))
+                {
+                    MessageBox.Show("No es posible abrir otra ventana");
+                    return;
+                }
+            }
+            FormAgregarImagen ventana = new FormAgregarImagen();
+            //ventana.MdiParent = this;
+            ventana.ShowDialog();
+        }
     }
 }
