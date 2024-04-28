@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Permissions;
 using System.Text;
 using System.Threading.Tasks;
 using dominio;
@@ -208,35 +209,36 @@ namespace manager
                 return new List<Articulo>();
             }
         }
-    
-  public bool verificadorDeCodigos(string codigo)
-{
-    AccesoDatos datos = new AccesoDatos();
 
-    try
-    {
-         
-        datos.setearConsulta("SELECT COUNT(*) FROM ARTICULOS WHERE Codigo = @Codigo");
-        datos.setearParametro("@Codigo", codigo);
-        datos.ejecutarLectura();
-    
-            if (datos.Lector.Read())
-            {
-                int count = datos.Lector.GetInt32(0);
-                return count > 0;
-            }
-            else
-            {
-                return false;
-            }
-    
-    }
-    catch (Exception ex)
-    {
-    
-        throw ex;
-    }
+        public bool verificadorDeCodigos(string codigo)
+        {
+            AccesoDatos datos = new AccesoDatos();
 
-}
+            try
+            {
+
+                datos.setearConsulta("SELECT COUNT(*) FROM ARTICULOS WHERE Codigo = @Codigo");
+                datos.setearParametro("@Codigo", codigo);
+                datos.ejecutarLectura();
+
+                if (datos.Lector.Read())
+                {
+                    int count = datos.Lector.GetInt32(0);
+                    return count > 0;
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+        }
+
     }
 }

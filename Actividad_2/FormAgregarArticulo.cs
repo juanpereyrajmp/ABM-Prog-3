@@ -33,17 +33,30 @@ namespace Actividad_2
             }
             return false;
         }
-        private bool validarNegativo(decimal num)
+        private bool validarNegativo(string num)
         {
             
-            if(num < 0)
+            decimal numero = decimal.Parse(num);
+
+            if(numero < 0)
             {
                 return true;
             }
             return false;
         }
 
-        
+        public bool verificadorDeNumeros(string codigo)
+        {            
+            decimal numero;
+
+            if (decimal.TryParse(codigo, out numero))
+            {
+                return true;
+            }
+
+            return false;
+
+        }
 
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -107,11 +120,19 @@ namespace Actividad_2
 
                 articulo.Nombre = txtBoxNombre.Text;
                 articulo.Descripcion = txtBoxDescripcion.Text;
-                /*if (validarNegativo(decimal.Parse(txtBoxPrecio.Text)))
+
+                if (verificadorDeNumeros(txtBoxPrecio.Text) == false || validarNegativo(txtBoxPrecio.Text) == true)
                 {
-                    MessageBox.Show("El Precio no puede ser Negativo");
-                    Close();
+                    MessageBox.Show("El Precio es incorrecto");
+                    return;
+                }
+
+                /*if (manager.verificadorDeNumeros(txtBoxPrecio.Text) == false)
+                {
+                    MessageBox.Show("El precio debe ser un número");
+                    return;
                 }*/
+
                 articulo.Precio = decimal.Parse(txtBoxPrecio.Text);
                 articulo.Imagen = (string)txtBoxImagen.Text;
                 articulo.Marca = (Marca)cboMarca.SelectedItem;
@@ -123,18 +144,6 @@ namespace Actividad_2
                 {
                     MessageBox.Show("El Precio no puede ser Negativo - Vuela a Agregar el Articulo");
                 } */
-
-                decimal verificadorNumero;
-
-                if (decimal.TryParse((txtBoxPrecio.Text), out verificadorNumero))
-                {
-                    articulo.Precio = decimal.Parse(txtBoxPrecio.Text);
-                }
-                else
-                {
-                    MessageBox.Show("Ingresar sólo números en el precio por favor");
-                    return;
-                }
 
 
                 if (articulo.Id != 0)
