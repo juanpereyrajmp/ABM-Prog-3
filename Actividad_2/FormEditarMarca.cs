@@ -17,6 +17,7 @@ namespace Actividad_2
     {
         private List<Marca> listaMarcas;
         private Marca seleccionada;
+
         public FormEditarMarca()
         {
             InitializeComponent();
@@ -50,9 +51,17 @@ namespace Actividad_2
             try
             {
                 descripcion = txtMarca.Text;
-                if (descripcion == "")
+                nuevaMarca.Descripcion = descripcion;
+                if (nuevaMarca.Descripcion == "")
                 {
-                    MessageBox.Show("El campo no puede estar vacio");
+                    MessageBox.Show("No se permiten espacios en blanco.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (txtMarca.Text.Trim().Length == 0)
+                {
+                    // Si solo contiene espacios en blanco, muestra un mensaje de error
+                    MessageBox.Show("El campo no puede estar vacio.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Limpia el contenido del TextBox
+                    txtMarca.Clear();
                 }
                 else
                 {
@@ -60,7 +69,7 @@ namespace Actividad_2
 
                     if (validar)
                     {
-                        MessageBox.Show("Ya existe esa marca");
+                        MessageBox.Show("Esa marca ya existe.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {

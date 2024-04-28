@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using dominio;
 using manager;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Actividad_2
 {
@@ -37,7 +38,14 @@ namespace Actividad_2
                 nueva.Descripcion = txtAgregarMarca.Text;
                 if (nueva.Descripcion == "")
                 {
-                    MessageBox.Show("El campo no puede estar vacio");
+                    MessageBox.Show("No se permiten espacios en blanco.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (txtAgregarMarca.Text.Trim().Length == 0)
+                {
+                    // Si solo contiene espacios en blanco, muestra un mensaje de error
+                    MessageBox.Show("El campo no puede estar vacio.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Limpia el contenido del TextBox
+                    txtAgregarMarca.Clear();
                 }
                 else
                 {
@@ -49,7 +57,7 @@ namespace Actividad_2
                     }
                     else
                     {
-                        MessageBox.Show("Esa marca ya existe");
+                        MessageBox.Show("Esa marca ya existe.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
