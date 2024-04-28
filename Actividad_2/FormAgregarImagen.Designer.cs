@@ -32,7 +32,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblTituloAgregarImagen = new System.Windows.Forms.Label();
             this.txtUrlImagen = new System.Windows.Forms.TextBox();
-            this.cboArtículos = new System.Windows.Forms.ComboBox();
+            this.cboArticulos = new System.Windows.Forms.ComboBox();
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
             this.pbxImagenes = new System.Windows.Forms.PictureBox();
             this.btnConfirmar = new System.Windows.Forms.Button();
@@ -78,27 +78,34 @@
             this.txtUrlImagen.Size = new System.Drawing.Size(178, 20);
             this.txtUrlImagen.TabIndex = 3;
             // 
-            // cboArtículos
+            // cboArticulos
             // 
-            this.cboArtículos.FormattingEnabled = true;
-            this.cboArtículos.Location = new System.Drawing.Point(135, 107);
-            this.cboArtículos.Name = "cboArtículos";
-            this.cboArtículos.Size = new System.Drawing.Size(178, 21);
-            this.cboArtículos.TabIndex = 4;
+            this.cboArticulos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboArticulos.FormattingEnabled = true;
+            this.cboArticulos.Location = new System.Drawing.Point(135, 107);
+            this.cboArticulos.Name = "cboArticulos";
+            this.cboArticulos.Size = new System.Drawing.Size(178, 21);
+            this.cboArticulos.TabIndex = 4;
+            this.cboArticulos.SelectedIndexChanged += new System.EventHandler(this.cboArtículos_SelectedIndexChanged);
             // 
             // dgvArticulos
             // 
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArticulos.Location = new System.Drawing.Point(13, 154);
+            this.dgvArticulos.MultiSelect = false;
             this.dgvArticulos.Name = "dgvArticulos";
+            this.dgvArticulos.ReadOnly = true;
+            this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvArticulos.Size = new System.Drawing.Size(341, 234);
             this.dgvArticulos.TabIndex = 5;
             // 
             // pbxImagenes
             // 
+            this.pbxImagenes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbxImagenes.Location = new System.Drawing.Point(372, 154);
             this.pbxImagenes.Name = "pbxImagenes";
             this.pbxImagenes.Size = new System.Drawing.Size(270, 234);
+            this.pbxImagenes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxImagenes.TabIndex = 6;
             this.pbxImagenes.TabStop = false;
             // 
@@ -110,6 +117,7 @@
             this.btnConfirmar.TabIndex = 7;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.UseVisualStyleBackColor = true;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // btnVolver
             // 
@@ -130,7 +138,7 @@
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.pbxImagenes);
             this.Controls.Add(this.dgvArticulos);
-            this.Controls.Add(this.cboArtículos);
+            this.Controls.Add(this.cboArticulos);
             this.Controls.Add(this.txtUrlImagen);
             this.Controls.Add(this.lblTituloAgregarImagen);
             this.Controls.Add(this.label2);
@@ -138,6 +146,7 @@
             this.Name = "FormAgregarImagen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAgregarImagen";
+            this.Load += new System.EventHandler(this.FormAgregarImagen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagenes)).EndInit();
             this.ResumeLayout(false);
@@ -151,7 +160,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblTituloAgregarImagen;
         private System.Windows.Forms.TextBox txtUrlImagen;
-        private System.Windows.Forms.ComboBox cboArtículos;
+        private System.Windows.Forms.ComboBox cboArticulos;
         private System.Windows.Forms.DataGridView dgvArticulos;
         private System.Windows.Forms.PictureBox pbxImagenes;
         private System.Windows.Forms.Button btnConfirmar;
