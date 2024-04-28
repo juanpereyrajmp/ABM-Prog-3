@@ -43,6 +43,8 @@ namespace Actividad_2
             return false;
         }
 
+        
+
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -54,17 +56,30 @@ namespace Actividad_2
             ArticuloManager manager = new ArticuloManager();
             ArticuloManager imagenes = new ArticuloManager();
 
+            
+
             try
             {
-                if(articulo == null)
+                if (articulo == null)
                 {
                     articulo = new Articulo();
                 }
 
-                /*if(validarVacio(txtBoxCodigo.Text))
+                articulo.Codigo = txtBoxCodigo.Text;
+                if (articulo.Codigo == "")
                 {
-                    MessageBox.Show("El Codigo no puede estar vacio");
-                }*/
+                    MessageBox.Show("El campo no puede estar vacio.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else if (txtBoxCodigo.Text.Trim().Length == 0)
+                {
+                    // Si solo contiene espacios en blanco, muestra un mensaje de error
+                    MessageBox.Show("No se permiten espacios en blanco.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Limpia el contenido del TextBox
+                    txtBoxCodigo.Clear();
+                    return;
+                }
+
                 articulo.Nombre = txtBoxNombre.Text;
                 articulo.Descripcion = txtBoxDescripcion.Text;
                 /*if (validarNegativo(decimal.Parse(txtBoxPrecio.Text)))
@@ -78,28 +93,40 @@ namespace Actividad_2
                 articulo.Categoria = (Categoria)cboCategoria.SelectedItem;
                 articulo.Codigo = txtBoxCodigo.Text;
 
-                if(articulo.Id != 0)
+
+                /*else if (validarNegativo(decimal.Parse(txtBoxPrecio.Text)))
+                {
+                    MessageBox.Show("El Precio no puede ser Negativo - Vuela a Agregar el Articulo");
+                } */
+
+                decimal verificadorNumero;
+
+                if (decimal.TryParse((txtBoxPrecio.Text), out verificadorNumero))
+                {
+                    articulo.Precio = decimal.Parse(txtBoxPrecio.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Ingresar sólo números en el precio por favor");
+                    return;
+                }
+
+
+                if (articulo.Id != 0)
                 {
                     manager.ModificarArticulo(articulo);
                     imagenes.modificarImagenArticulo(articulo);
                     MessageBox.Show("Articulo modificado con éxito");
 
                 }
-                else if ((validarVacio(txtBoxCodigo.Text)))
-                {
-                    MessageBox.Show("El Codigo no puede estar vacio - Vuelva a Agregar el Articulo");
-                }
-                else if (validarNegativo(decimal.Parse(txtBoxPrecio.Text)))
-                {
-                    MessageBox.Show("El Precio no puede ser Negativo - Vuela a Agregar el Articulo");
-                }
-
                 else
                 {
                     manager.agregarArticulo(articulo);
-                    imagenes.agregarImagen(articulo);
                     MessageBox.Show("Articulo agregado con éxito");
+                    imagenes.agregarImagen(articulo);
                 }
+
+
                 Close();
             }
             catch (Exception ex)
