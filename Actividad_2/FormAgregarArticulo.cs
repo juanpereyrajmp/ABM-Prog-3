@@ -65,9 +65,6 @@ namespace Actividad_2
                 {
                     MessageBox.Show("El Codigo no puede estar vacio");
                 }*/
-                articulo.Codigo = txtBoxCodigo.Text;
-                articulo.Codigo = txtBoxCodigo.Text;
-                articulo.Codigo = txtBoxCodigo.Text;
                 articulo.Nombre = txtBoxNombre.Text;
                 articulo.Descripcion = txtBoxDescripcion.Text;
                 /*if (validarNegativo(decimal.Parse(txtBoxPrecio.Text)))
@@ -79,8 +76,9 @@ namespace Actividad_2
                 articulo.Imagen = (string)txtBoxImagen.Text;
                 articulo.Marca = (Marca)cboMarca.SelectedItem;
                 articulo.Categoria = (Categoria)cboCategoria.SelectedItem;
+                articulo.Codigo = txtBoxCodigo.Text;
 
-                if(articulo.Id != 0 && validarVacio(txtBoxCodigo.Text))
+                if(articulo.Id != 0)
                 {
                     manager.ModificarArticulo(articulo);
                     imagenes.modificarImagenArticulo(articulo);
@@ -88,21 +86,20 @@ namespace Actividad_2
 
                 }
                 else if ((validarVacio(txtBoxCodigo.Text)))
-                    {
+                {
                     MessageBox.Show("El Codigo no puede estar vacio - Vuelva a Agregar el Articulo");
-                    }
-                    else if (validarNegativo(decimal.Parse(txtBoxPrecio.Text)))
-                    {
-                     MessageBox.Show("El Precio no puede ser Negativo - Vuela a Agregar el Articulo");
-
-                    }
+                }
+                else if (validarNegativo(decimal.Parse(txtBoxPrecio.Text)))
+                {
+                    MessageBox.Show("El Precio no puede ser Negativo - Vuela a Agregar el Articulo");
+                }
 
                 else
-                   {
-                    manager.AgregarArticulo(articulo);
+                {
+                    manager.agregarArticulo(articulo);
                     imagenes.agregarImagen(articulo);
                     MessageBox.Show("Articulo agregado con éxito");
-                   }
+                }
                 Close();
             }
             catch (Exception ex)

@@ -77,20 +77,23 @@ namespace manager
             }
         }
 
-        public void AgregarArticulo(Articulo agregar)
+        public void agregarArticulo(Articulo nuevoArticulo)
         {
-            AccesoDatos datos = new AccesoDatos();
-
             try
             {
-                datos.setearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, Precio, IdMarca, IdCategoria) VALUES ('" + agregar.Codigo + "', '" + agregar.Nombre + "', '" + agregar.Descripcion + "', " + agregar.Precio + ", @IdMarca, @IdCategoria)");
-                datos.setearParametro("@IdMarca", agregar.Marca.Id);
-                datos.setearParametro("@IdCategoria", agregar.Categoria.Id);
-                datos.ejecutarAccion();
+                datos.setearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) VALUES (@Codigo,@Nombre,@Descripcion,@IdMarca,@IdCategoria,@Precio)");
+                datos.setearParametro("@Codigo", nuevoArticulo.Codigo);
+                datos.setearParametro("@Nombre", nuevoArticulo.Nombre);
+                datos.setearParametro("@Descripcion", nuevoArticulo.Descripcion);
+                datos.setearParametro("@IdMarca", nuevoArticulo.Marca.Id);
+                datos.setearParametro("@IdCategoria", nuevoArticulo.Categoria.Id);
+                datos.setearParametro("@Precio", nuevoArticulo.Precio);
+
+                datos.cerrarConexion();
+                datos.ejecutarLectura();
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
             finally
@@ -98,6 +101,7 @@ namespace manager
                 datos.cerrarConexion();
             }
         }
+
         public void agregarImagen(Articulo nuevoArticulo)
         {
             Articulo articulo = new Articulo();
@@ -114,7 +118,6 @@ namespace manager
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
             finally
@@ -122,8 +125,6 @@ namespace manager
                 datos.cerrarConexion();
             }
         }
-
-
 
         public void EliminarArticulo(int id)
         {
@@ -136,36 +137,30 @@ namespace manager
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }
 
-        public void ModificarArticulo(Articulo modificar)
+        public void ModificarArticulo(Articulo articulo)
         {
-            AccesoDatos datos = new AccesoDatos();
-
             try
             {
-                datos.setearConsulta("UPDATE ARTICULOS SET Codigo = @codigo, Nombre = @nombre, Descripcion = @descripcion, IdMarca = @idMarca, IdCategoria = @idCategoria, Precio = @precio WHERE Id = @Id");
-                datos.setearParametro("@codigo", modificar.Codigo);
-                datos.setearParametro("@nombre", modificar.Nombre);
-                datos.setearParametro("@descripcion", modificar.Descripcion);
-                datos.setearParametro("@idMarca", modificar.Marca.Id);
-                datos.setearParametro("@IdCategoria", modificar.Categoria.Id);
-                datos.setearParametro("@precio", modificar.Precio);
-                datos.setearParametro("@Id", modificar.Id); 
+                datos.setearConsulta("UPDATE ARTICULOS SET Codigo = @Codigo, Nombre = @Nombre, Precio = @Precio, Descripcion = @Descripcion WHERE Id = @Id");
+                datos.setearParametro("@Id", articulo.Id);
+                datos.setearParametro("@Codigo", articulo.Codigo);
+                datos.setearParametro("@Nombre", articulo.Nombre);
+                datos.setearParametro("@Descripcion", articulo.Descripcion);
+                datos.setearParametro("@Precio", articulo.Precio);
+                datos.cerrarConexion();
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
             {
+
                 throw ex;
             }
-            finally
-            {
-                datos.cerrarConexion();
-            }
         }
+
         public void modificarImagenArticulo(Articulo articulo)
         {
             try
@@ -211,7 +206,5 @@ namespace manager
                 return new List<Articulo>();
             }
         }
-
-
     }
 }

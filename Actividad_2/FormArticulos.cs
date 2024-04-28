@@ -64,9 +64,7 @@ namespace Actividad_2
             }
 
             //dgvArticulos.DataSource = null;
-            dgvArticulos.DataSource = listaFiltrada;
-
-            
+            dgvArticulos.DataSource = listaFiltrada;    
 
         }
 
