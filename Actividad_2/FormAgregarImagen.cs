@@ -93,6 +93,17 @@ namespace Actividad_2
 
             try
             {
+                if(txtUrlImagen.Text == "")
+                {
+                    MessageBox.Show("El campo Url Imagen no puede quedar vacio.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (txtUrlImagen.Text.Trim().Length == 0)
+                {
+                    // Si solo contiene espacios en blanco, muestra un mensaje de error
+                    MessageBox.Show("No se permiten espacios en blanco.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Limpia el contenido del TextBox
+                    txtUrlImagen.Clear();
+                }
                 if (txtUrlImagen.Text != "")
                 {
                     seleccionado.Imagen = txtUrlImagen.Text;
@@ -101,7 +112,6 @@ namespace Actividad_2
                     MessageBox.Show("Nueva imagen agregada al articulo");
                     Close();
                 }
-                else MessageBox.Show("El campo Url Imagen no puede quedar vacio. ");
             }
             catch (Exception ex)
             {

@@ -133,5 +133,49 @@ namespace Actividad_2
             //ventana.MdiParent = this;
             ventana.ShowDialog();
         }
+
+        private int indiceImagenActual = 0;
+
+        private void btnImagenSiguiente_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            int totalImagenes = seleccionado.Imagenes.Count;
+
+            if (totalImagenes > 0)
+            {
+                indiceImagenActual++;
+
+                if (indiceImagenActual >= totalImagenes)
+                {
+                    indiceImagenActual = 0;
+                }
+                cargarImagen(seleccionado.Imagenes[indiceImagenActual]);
+            }
+            else
+            {
+                MessageBox.Show("No hay imágenes disponibles para este artículo.");
+            }
+        }
+
+        private void btnImagenAnterior_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            int totalImagenes = seleccionado.Imagenes.Count;
+
+            if (totalImagenes > 0)
+            {
+                indiceImagenActual--;
+
+                if (indiceImagenActual < 0)
+                {
+                    indiceImagenActual = totalImagenes - 1;
+                }
+                cargarImagen(seleccionado.Imagenes[indiceImagenActual]);
+            }
+            else
+            {
+                MessageBox.Show("No hay imágenes disponibles para este artículo.");
+            }
+        }
     }
 }

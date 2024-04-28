@@ -54,12 +54,12 @@ namespace Actividad_2
                 nuevaMarca.Descripcion = descripcion;
                 if (nuevaMarca.Descripcion == "")
                 {
-                    MessageBox.Show("No se permiten espacios en blanco.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("El campo no puede estar vacio.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else if (txtMarca.Text.Trim().Length == 0)
                 {
                     // Si solo contiene espacios en blanco, muestra un mensaje de error
-                    MessageBox.Show("El campo no puede estar vacio.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No se permiten espacios en blanco.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     // Limpia el contenido del TextBox
                     txtMarca.Clear();
                 }

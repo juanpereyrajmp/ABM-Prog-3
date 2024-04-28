@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
             this.btnEliminarArticulo = new System.Windows.Forms.Button();
             this.btnModificarArticulo = new System.Windows.Forms.Button();
@@ -37,6 +37,8 @@
             this.labelFiltro = new System.Windows.Forms.Label();
             this.textBoxFiltro = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnImagenAnterior = new System.Windows.Forms.Button();
+            this.btnImagenSiguiente = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxArticulos)).BeginInit();
             this.SuspendLayout();
@@ -46,14 +48,14 @@
             this.dgvArticulos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvArticulos.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvArticulos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvArticulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvArticulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvArticulos.Location = new System.Drawing.Point(10, 66);
@@ -102,7 +104,7 @@
             // 
             // picBoxArticulos
             // 
-            this.picBoxArticulos.Location = new System.Drawing.Point(587, 66);
+            this.picBoxArticulos.Location = new System.Drawing.Point(598, 66);
             this.picBoxArticulos.Name = "picBoxArticulos";
             this.picBoxArticulos.Size = new System.Drawing.Size(250, 250);
             this.picBoxArticulos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -141,11 +143,33 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnImagenAnterior
+            // 
+            this.btnImagenAnterior.Location = new System.Drawing.Point(598, 322);
+            this.btnImagenAnterior.Name = "btnImagenAnterior";
+            this.btnImagenAnterior.Size = new System.Drawing.Size(95, 23);
+            this.btnImagenAnterior.TabIndex = 10;
+            this.btnImagenAnterior.Text = "Imagen anterior";
+            this.btnImagenAnterior.UseVisualStyleBackColor = true;
+            this.btnImagenAnterior.Click += new System.EventHandler(this.btnImagenAnterior_Click);
+            // 
+            // btnImagenSiguiente
+            // 
+            this.btnImagenSiguiente.Location = new System.Drawing.Point(753, 322);
+            this.btnImagenSiguiente.Name = "btnImagenSiguiente";
+            this.btnImagenSiguiente.Size = new System.Drawing.Size(95, 23);
+            this.btnImagenSiguiente.TabIndex = 11;
+            this.btnImagenSiguiente.Text = "Imagen siguiente";
+            this.btnImagenSiguiente.UseVisualStyleBackColor = true;
+            this.btnImagenSiguiente.Click += new System.EventHandler(this.btnImagenSiguiente_Click);
+            // 
             // FormArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(860, 483);
+            this.Controls.Add(this.btnImagenSiguiente);
+            this.Controls.Add(this.btnImagenAnterior);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBoxFiltro);
             this.Controls.Add(this.labelFiltro);
@@ -179,5 +203,7 @@
         private System.Windows.Forms.Label labelFiltro;
         private System.Windows.Forms.TextBox textBoxFiltro;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnImagenAnterior;
+        private System.Windows.Forms.Button btnImagenSiguiente;
     }
 }
