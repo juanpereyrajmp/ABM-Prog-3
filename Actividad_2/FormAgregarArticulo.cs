@@ -19,6 +19,12 @@ namespace Actividad_2
         {
             InitializeComponent();
         }
+        public FormAgregarArticulo(Articulo articulo)
+        {
+            InitializeComponent();
+            this.articulo = articulo;
+            Text = "Modificar Articulo";
+        }
         private bool validarVacio(string texto)
         {
             if (string.IsNullOrEmpty(texto))
@@ -37,12 +43,6 @@ namespace Actividad_2
             return false;
         }
 
-        public FormAgregarArticulo(Articulo articulo)
-        {
-            InitializeComponent();
-            this.articulo = articulo;
-            Text = "Modificar Articulo";
-        }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -113,6 +113,7 @@ namespace Actividad_2
         {
             MarcaManager marcaManager = new MarcaManager();
             CategoriaManager categoriaManager = new CategoriaManager();
+            
 
             try
             {
@@ -129,9 +130,10 @@ namespace Actividad_2
                     txtBoxNombre.Text = articulo.Nombre;
                     txtBoxDescripcion.Text = articulo.Descripcion;
                     txtBoxPrecio.Text = articulo.Precio.ToString();
-                    cargarImagen(articulo.Imagen);
+                    txtBoxImagen.Text = articulo.Imagen;
                     cboMarca.SelectedValue = articulo.Marca.Id;
                     cboCategoria.SelectedValue = articulo.Categoria.Id;
+                    cargarImagen(articulo.Imagen);
                 }
             }
             catch (Exception ex)
