@@ -28,20 +28,11 @@ namespace Actividad_2
         private void cargar()
         {
             ArticuloManager articuloManager = new ArticuloManager();
-
-            try
-            {
-                listaArticulo = articuloManager.ListarArticulos();
-                dgvArticulos.DataSource = listaArticulo;
-                dgvArticulos.Columns["Imagen"].Visible = false;
-                dgvArticulos.Columns["Id"].Visible = false;
-                cargarImagen(listaArticulo[0].Imagen);
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.ToString());
-            }
+            listaArticulo = articuloManager.listaParaImagenes();
+            dgvArticulos.DataSource = articuloManager.listaParaImagenes().GroupBy(a => a.Codigo).Select(group => group.First()).ToList();
+            dgvArticulos.Columns[0].Visible = false;
+            dgvArticulos.Columns[6].Visible = false;
+            cargarImagen(listaArticulo[0].Imagen);
         }
 
         private void cargarImagen(string imagen)

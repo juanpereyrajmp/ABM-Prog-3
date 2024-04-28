@@ -185,6 +185,33 @@ namespace manager
             }
         }
 
+        public List<Articulo> listaParaImagenes()
+        {
+            List<Articulo> listaArticulos = ListarArticulos();
+
+            if (listaArticulos != null && listaArticulos.Count > 0)
+            {
+                Dictionary<string, Articulo> diccionarioArticulos = new Dictionary<string, Articulo>();
+
+                foreach (var articulo in listaArticulos)
+                {
+                    if (!diccionarioArticulos.ContainsKey(articulo.Codigo))
+                    {
+                        diccionarioArticulos.Add(articulo.Codigo, articulo);
+                        articulo.Imagenes = new List<string>();
+                    }
+                    diccionarioArticulos[articulo.Codigo].Imagenes.Add(articulo.Imagen);
+                }
+
+                List<Articulo> listaParaDgv = diccionarioArticulos.Values.ToList();
+                return listaParaDgv;
+            }
+            else
+            {
+                return new List<Articulo>();
+            }
+        }
+
 
     }
 }
