@@ -12,6 +12,8 @@ namespace manager
     {
         AccesoDatos datos = new AccesoDatos();
 
+
+
         public List<Articulo> ListarArticulos()
         {
             List<Articulo> lista = new List<Articulo>();
@@ -168,7 +170,7 @@ namespace manager
                 datos.setearConsulta("UPDATE IMAGENES SET ImagenUrl = @ImagenUrl WHERE Id = (SELECT TOP 1 Id FROM IMAGENES WHERE IdArticulo = @IdA)");
                 datos.setearParametro("@IdA", articulo.Id);
                 datos.setearParametro("@ImagenUrl", articulo.Imagen);
-                datos.cerrarConexion(); 
+                datos.cerrarConexion();
                 datos.ejecutarAccion();
 
 
@@ -206,5 +208,35 @@ namespace manager
                 return new List<Articulo>();
             }
         }
+    
+  public bool verificadorDeCodigos(string codigo)
+{
+    AccesoDatos datos = new AccesoDatos();
+
+    try
+    {
+         
+        datos.setearConsulta("SELECT COUNT(*) FROM ARTICULOS WHERE Codigo = @Codigo");
+        datos.setearParametro("@Codigo", codigo);
+        datos.ejecutarLectura();
+    
+            if (datos.Lector.Read())
+            {
+                int count = datos.Lector.GetInt32(0);
+                return count > 0;
+            }
+            else
+            {
+                return false;
+            }
+    
+    }
+    catch (Exception ex)
+    {
+    
+        throw ex;
+    }
+
+}
     }
 }

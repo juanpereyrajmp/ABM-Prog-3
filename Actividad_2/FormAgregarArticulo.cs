@@ -63,10 +63,32 @@ namespace Actividad_2
                 if (articulo == null)
                 {
                     articulo = new Articulo();
+                    if (manager.verificadorDeCodigos(txtBoxCodigo.Text) == true)
+                    {
+                        MessageBox.Show("El codigo ya existe. Proba con otro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+
+                    }
+                }                
+
+                if(txtBoxCodigo.Text != articulo.Codigo)
+                {
+                    if (manager.verificadorDeCodigos(txtBoxCodigo.Text) == true)
+                    {
+                        MessageBox.Show("El codigo ya existe. Proba con otro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+
+                    }
                 }
 
                 articulo.Codigo = txtBoxCodigo.Text;
-                if (articulo.Codigo == "")
+
+                /*if (manager.verificadorDeCodigos(txtBoxCodigo.Text) == true)
+                {
+                    MessageBox.Show("El codigo ya existe. Proba con otro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else*/ if (articulo.Codigo == "")
                 {
                     MessageBox.Show("El campo no puede estar vacio.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
@@ -79,6 +101,9 @@ namespace Actividad_2
                     txtBoxCodigo.Clear();
                     return;
                 }
+
+
+
 
                 articulo.Nombre = txtBoxNombre.Text;
                 articulo.Descripcion = txtBoxDescripcion.Text;
@@ -187,5 +212,7 @@ namespace Actividad_2
                 pbxArticulo.Load("https://t4.ftcdn.net/jpg/05/17/53/57/360_F_517535712_q7f9QC9X6TQxWi6xYZZbMmw5cnLMr279.jpg");
             }
         }
+
+        
     }
 }
