@@ -42,7 +42,7 @@ namespace Actividad_2
 
 
             bool enUso = listaArticulos.Any(item => item.Categoria.Descripcion == seleccionada.Descripcion);
-
+            //bool enUso = listaArticulos.Any(item => item.Categoria.Id == seleccionada.Id);
 
             if (!enUso)
             {
