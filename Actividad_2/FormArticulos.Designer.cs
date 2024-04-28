@@ -142,7 +142,6 @@
             this.btnAgregarImg.TabIndex = 9;
             this.btnAgregarImg.Text = "Agregar Imagen";
             this.btnAgregarImg.UseVisualStyleBackColor = true;
-            this.btnAgregarImg.Click += new System.EventHandler(this.btnAgregarImg_Click);
             // 
             // FormArticulos
             // 

@@ -129,11 +129,5 @@ namespace Actividad_2
                 MessageBox.Show(ex.ToString());
             }
         }
-
-        private void btnAgregarImg_Click(object sender, EventArgs e)
-        {
-            FormAgregarImagen formAgregarImagen = new FormAgregarImagen();
-            formAgregarImagen.ShowDialog();
-        }
     }
 }
