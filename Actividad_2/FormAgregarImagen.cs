@@ -110,7 +110,10 @@ namespace Actividad_2
                     seleccionado.Id = int.Parse(cboArticulos.Text);
                     AgregarImagenArtExistente(seleccionado);
                     MessageBox.Show("Nueva imagen agregada al articulo");
+
+                   
                     Close();
+
                 }
             }
             catch (Exception ex)
@@ -122,6 +125,15 @@ namespace Actividad_2
             {
                 datos.cerrarConexion();
             }
+        }
+        private void cargar()
+        {
+            ArticuloManager articuloManager = new ArticuloManager();
+            listaArticulo = articuloManager.listaParaImagenes();
+            dgvArticulos.DataSource = articuloManager.listaParaImagenes().GroupBy(a => a.Codigo).Select(group => group.First()).ToList();
+            dgvArticulos.Columns[0].Visible = false;
+            dgvArticulos.Columns[6].Visible = false;
+            cargarImagen(listaArticulo[0].Imagen);
         }
     }
 }

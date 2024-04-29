@@ -39,7 +39,9 @@ namespace Actividad_2
         {
             try
             {
-               picBoxArticulos.Load(imagen);  
+                picBoxArticulos.Load(imagen);  
+                this.Refresh();
+
             }
             catch (Exception)
             {
@@ -211,5 +213,6 @@ namespace Actividad_2
 
             
         }
+
     }
 }

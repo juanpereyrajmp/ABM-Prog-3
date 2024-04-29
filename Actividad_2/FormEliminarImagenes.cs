@@ -18,7 +18,6 @@ namespace Actividad_2
         public int idSeleccion { get; set; }
 
         AccesoDatos datos = new AccesoDatos();
-        private List<Articulo> listaArticulo;
         private List<Imagen> listaImagenes;
         public FormEliminarImagenes()
         {
@@ -115,17 +114,17 @@ namespace Actividad_2
             ImagenManager manager = new ImagenManager();
             Imagen imagen = new Imagen();
 
-            Articulo seleccion;
+            Imagen seleccion;
 
             try
             {
                 DialogResult respuesta = MessageBox.Show("¿Seguro querés eliminar la imagen seleccionada?", "Eliminado", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (respuesta == DialogResult.Yes)
                 {
-                    seleccion = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                    seleccion = (Imagen)dgvArticulos.CurrentRow.DataBoundItem;
                     manager.eliminarImagenes(seleccion.Id);
 
-                    cargar();
+                    Close();
                 }
             }
             catch (Exception ex)
