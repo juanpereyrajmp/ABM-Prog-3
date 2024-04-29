@@ -177,5 +177,39 @@ namespace Actividad_2
                 MessageBox.Show("No hay imágenes disponibles para este artículo.");
             }
         }
+
+        private void btnEliminarImg_Click(object sender, EventArgs e)
+        {
+
+            ArticuloManager manager = new ArticuloManager();
+
+            Articulo seleccion;
+
+            try
+            {
+                //DialogResult respuesta = MessageBox.Show("¿Seguro querés eliminar el articulo seleccionado?", "Eliminado", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                //if (respuesta == DialogResult.Yes)
+                //{
+                seleccion = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                //int id =seleccion.Id;
+                FormEliminarImagenes formEliminarImagenes = new FormEliminarImagenes();
+                formEliminarImagenes.idSeleccion = seleccion.Id;    
+                formEliminarImagenes.ShowDialog();
+
+                //manager.EliminarArticulo(seleccion.Id);
+                //cargar();
+                // }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+
+
+
+
+            
+        }
     }
 }
